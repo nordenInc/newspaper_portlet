@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.softwerke.nrv.newsapaper.model.NewsArticle" />
+	<import class="com.softwerke.nrv.newsapaper.model.UserComment" />
+	<class name="com.softwerke.nrv.newsapaper.model.impl.NewsArticleImpl" table="newsartcile_data">
+		<cache usage="read-write" />
+		<id name="articleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="editorComment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="updateDate" type="org.hibernate.type.TimestampType" />
+		<property name="authorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.softwerke.nrv.newsapaper.model.impl.UserCommentImpl" table="usercomment_data">
+		<cache usage="read-write" />
+		<id name="commentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="articleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="commentContent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="authorImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="commentTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>
