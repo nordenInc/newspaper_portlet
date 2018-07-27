@@ -329,6 +329,7 @@ public class UserCommentPersistenceImpl extends BasePersistenceImpl<UserComment>
         userCommentImpl.setCreateDate(userComment.getCreateDate());
         userCommentImpl.setAuthorImageId(userComment.getAuthorImageId());
         userCommentImpl.setCommentTitle(userComment.getCommentTitle());
+        userCommentImpl.setImageUrl(userComment.getImageUrl());
 
         return userCommentImpl;
     }

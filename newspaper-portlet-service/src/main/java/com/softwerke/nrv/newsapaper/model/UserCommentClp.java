@@ -28,6 +28,7 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
     private Date _createDate;
     private long _authorImageId;
     private String _commentTitle;
+    private String _imageUrl;
     private BaseModel<?> _userCommentRemoteModel;
     private Class<?> _clpSerializerClass = com.softwerke.nrv.newsapaper.service.ClpSerializer.class;
 
@@ -75,6 +76,7 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
         attributes.put("createDate", getCreateDate());
         attributes.put("authorImageId", getAuthorImageId());
         attributes.put("commentTitle", getCommentTitle());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -121,6 +123,12 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
 
         if (commentTitle != null) {
             setCommentTitle(commentTitle);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -279,6 +287,28 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
         }
     }
 
+    @Override
+    public String getImageUrl() {
+        return _imageUrl;
+    }
+
+    @Override
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
+
+        if (_userCommentRemoteModel != null) {
+            try {
+                Class<?> clazz = _userCommentRemoteModel.getClass();
+
+                Method method = clazz.getMethod("setImageUrl", String.class);
+
+                method.invoke(_userCommentRemoteModel, imageUrl);
+            } catch (Exception e) {
+                throw new UnsupportedOperationException(e);
+            }
+        }
+    }
+
     public BaseModel<?> getUserCommentRemoteModel() {
         return _userCommentRemoteModel;
     }
@@ -353,6 +383,7 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
         clone.setCreateDate(getCreateDate());
         clone.setAuthorImageId(getAuthorImageId());
         clone.setCommentTitle(getCommentTitle());
+        clone.setImageUrl(getImageUrl());
 
         return clone;
     }
@@ -402,7 +433,7 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(15);
+        StringBundler sb = new StringBundler(17);
 
         sb.append("{commentId=");
         sb.append(getCommentId());
@@ -418,6 +449,8 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
         sb.append(getAuthorImageId());
         sb.append(", commentTitle=");
         sb.append(getCommentTitle());
+        sb.append(", imageUrl=");
+        sb.append(getImageUrl());
         sb.append("}");
 
         return sb.toString();
@@ -425,7 +458,7 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
 
     @Override
     public String toXmlString() {
-        StringBundler sb = new StringBundler(25);
+        StringBundler sb = new StringBundler(28);
 
         sb.append("<model><model-name>");
         sb.append("com.softwerke.nrv.newsapaper.model.UserComment");
@@ -458,6 +491,10 @@ public class UserCommentClp extends BaseModelImpl<UserComment>
         sb.append(
             "<column><column-name>commentTitle</column-name><column-value><![CDATA[");
         sb.append(getCommentTitle());
+        sb.append("]]></column-value></column>");
+        sb.append(
+            "<column><column-name>imageUrl</column-name><column-value><![CDATA[");
+        sb.append(getImageUrl());
         sb.append("]]></column-value></column>");
 
         sb.append("</model>");

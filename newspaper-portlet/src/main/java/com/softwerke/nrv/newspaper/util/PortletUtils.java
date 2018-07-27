@@ -2,8 +2,8 @@ package com.softwerke.nrv.newspaper.util;
 
 import java.util.List;
 
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletResponse;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -18,9 +18,11 @@ public class PortletUtils {
 	
 	private static final Log log = LogFactoryUtil.getLog(PortletUtils.class); 
 	
-	public void getUserRole(RenderRequest renderRequest, RenderResponse renderResponse) {
+	public String getUserRole(PortletRequest portletRequest, PortletResponse portletResponse) {
+		
+		String userRole = null;
 		try {
-			ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY); 
+			ThemeDisplay themeDisplay = (ThemeDisplay) portletRequest.getAttribute(WebKeys.THEME_DISPLAY); 
 			long currentUserId = themeDisplay.getUserId();
 			List<Role> defaultRoles =  RoleLocalServiceUtil.getUserRoles(currentUserId);
 			Role role = RoleLocalServiceUtil.getRole(themeDisplay.getCompanyId(), "User");
@@ -32,13 +34,14 @@ public class PortletUtils {
 					roleId = defaultRole.getRoleId();
 				}
 			}
-			String userRole = RoleLocalServiceUtil.getRole(roleId).getName();
-			renderRequest.setAttribute("userRole", userRole);
+			userRole = RoleLocalServiceUtil.getRole(roleId).getName();
+			portletRequest.setAttribute("userRole", userRole);
 		} catch (SystemException e) {
 			log.error("SystemException, check getUserRole method." + e.getMessage());
 		} catch (PortalException e) {
 			log.error("PortalException, check getUserRole method." + e.getMessage());
 		}
+		return userRole;
 	}
 	
 	

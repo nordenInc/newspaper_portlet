@@ -20,5 +20,6 @@
 		<field name="createDate" type="Date" />
 		<field name="authorImageId" type="long" />
 		<field name="commentTitle" type="String" />
+		<field name="imageUrl" type="String" />
 	</model>
 </model-hints>

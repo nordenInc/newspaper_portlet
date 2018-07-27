@@ -146,6 +146,21 @@ public interface UserCommentModel extends BaseModel<UserComment> {
      */
     public void setCommentTitle(String commentTitle);
 
+    /**
+     * Returns the image url of this user comment.
+     *
+     * @return the image url of this user comment
+     */
+    @AutoEscape
+    public String getImageUrl();
+
+    /**
+     * Sets the image url of this user comment.
+     *
+     * @param imageUrl the image url of this user comment
+     */
+    public void setImageUrl(String imageUrl);
+
     @Override
     public boolean isNew();
 

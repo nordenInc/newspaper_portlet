@@ -17,5 +17,6 @@ create table usercomment_data (
 	commentContent VARCHAR(75) null,
 	createDate DATE null,
 	authorImageId LONG,
-	commentTitle VARCHAR(75) null
+	commentTitle VARCHAR(75) null,
+	imageUrl VARCHAR(75) null
 );

@@ -45,6 +45,7 @@ public class UserCommentWrapper implements UserComment,
         attributes.put("createDate", getCreateDate());
         attributes.put("authorImageId", getAuthorImageId());
         attributes.put("commentTitle", getCommentTitle());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -91,6 +92,12 @@ public class UserCommentWrapper implements UserComment,
 
         if (commentTitle != null) {
             setCommentTitle(commentTitle);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -252,6 +259,26 @@ public class UserCommentWrapper implements UserComment,
     @Override
     public void setCommentTitle(java.lang.String commentTitle) {
         _userComment.setCommentTitle(commentTitle);
+    }
+
+    /**
+    * Returns the image url of this user comment.
+    *
+    * @return the image url of this user comment
+    */
+    @Override
+    public java.lang.String getImageUrl() {
+        return _userComment.getImageUrl();
+    }
+
+    /**
+    * Sets the image url of this user comment.
+    *
+    * @param imageUrl the image url of this user comment
+    */
+    @Override
+    public void setImageUrl(java.lang.String imageUrl) {
+        _userComment.setImageUrl(imageUrl);
     }
 
     @Override

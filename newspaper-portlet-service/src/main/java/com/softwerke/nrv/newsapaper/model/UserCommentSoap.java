@@ -20,6 +20,7 @@ public class UserCommentSoap implements Serializable {
     private Date _createDate;
     private long _authorImageId;
     private String _commentTitle;
+    private String _imageUrl;
 
     public UserCommentSoap() {
     }
@@ -34,6 +35,7 @@ public class UserCommentSoap implements Serializable {
         soapModel.setCreateDate(model.getCreateDate());
         soapModel.setAuthorImageId(model.getAuthorImageId());
         soapModel.setCommentTitle(model.getCommentTitle());
+        soapModel.setImageUrl(model.getImageUrl());
 
         return soapModel;
     }
@@ -136,5 +138,13 @@ public class UserCommentSoap implements Serializable {
 
     public void setCommentTitle(String commentTitle) {
         _commentTitle = commentTitle;
+    }
+
+    public String getImageUrl() {
+        return _imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
     }
 }

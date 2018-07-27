@@ -29,5 +29,6 @@
 		<property name="createDate" type="org.hibernate.type.TimestampType" />
 		<property name="authorImageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="commentTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 </hibernate-mapping>

@@ -21,5 +21,6 @@
         <column name="createDate" type="Date"></column>
         <column name="authorImageId" type="long"></column>
         <column name="commentTitle" type="String"></column>
+        <column name="imageUrl" type="String"></column>
     </entity>
 </service-builder>

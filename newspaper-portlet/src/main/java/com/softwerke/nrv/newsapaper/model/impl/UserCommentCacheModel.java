@@ -29,10 +29,11 @@ public class UserCommentCacheModel implements CacheModel<UserComment>,
     public long createDate;
     public long authorImageId;
     public String commentTitle;
+    public String imageUrl;
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(15);
+        StringBundler sb = new StringBundler(17);
 
         sb.append("{commentId=");
         sb.append(commentId);
@@ -48,6 +49,8 @@ public class UserCommentCacheModel implements CacheModel<UserComment>,
         sb.append(authorImageId);
         sb.append(", commentTitle=");
         sb.append(commentTitle);
+        sb.append(", imageUrl=");
+        sb.append(imageUrl);
         sb.append("}");
 
         return sb.toString();
@@ -86,6 +89,12 @@ public class UserCommentCacheModel implements CacheModel<UserComment>,
             userCommentImpl.setCommentTitle(commentTitle);
         }
 
+        if (imageUrl == null) {
+            userCommentImpl.setImageUrl(StringPool.BLANK);
+        } else {
+            userCommentImpl.setImageUrl(imageUrl);
+        }
+
         userCommentImpl.resetOriginalValues();
 
         return userCommentImpl;
@@ -100,6 +109,7 @@ public class UserCommentCacheModel implements CacheModel<UserComment>,
         createDate = objectInput.readLong();
         authorImageId = objectInput.readLong();
         commentTitle = objectInput.readUTF();
+        imageUrl = objectInput.readUTF();
     }
 
     @Override
@@ -127,6 +137,12 @@ public class UserCommentCacheModel implements CacheModel<UserComment>,
             objectOutput.writeUTF(StringPool.BLANK);
         } else {
             objectOutput.writeUTF(commentTitle);
+        }
+
+        if (imageUrl == null) {
+            objectOutput.writeUTF(StringPool.BLANK);
+        } else {
+            objectOutput.writeUTF(imageUrl);
         }
     }
 }

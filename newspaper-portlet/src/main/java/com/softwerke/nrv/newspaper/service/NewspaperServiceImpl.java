@@ -15,24 +15,21 @@ import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.repository.model.FileEntry;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.theme.ThemeDisplay;
-import com.liferay.portal.util.PortalUtil;
-import com.liferay.portlet.documentlibrary.model.DLFileEntry;
-import com.liferay.portlet.documentlibrary.service.DLAppServiceUtil;
-import com.liferay.portlet.documentlibrary.service.DLFileEntryLocalServiceUtil;
 import com.softwerke.nrv.newsapaper.model.NewsArticle;
 import com.softwerke.nrv.newsapaper.model.UserComment;
 import com.softwerke.nrv.newsapaper.service.NewsArticleLocalServiceUtil;
 import com.softwerke.nrv.newsapaper.service.UserCommentLocalServiceUtil;
 import com.softwerke.nrv.newspaper.portlet.NewspaperPortlet;
+import com.softwerke.nrv.newspaper.util.PortletUtils;
 import com.softwerke.nrv.newspaper.util.StatusEnums;
 
 public class NewspaperServiceImpl implements NewspaperService {
 	
 	private static final Log log = LogFactoryUtil.getLog(NewspaperServiceImpl.class); 
+	private PortletUtils portletUtils = new PortletUtils();
 																									
 	private static volatile NewspaperServiceImpl newspaperServiceImpl;
 	private NewspaperServiceImpl() {}
@@ -60,9 +57,16 @@ public class NewspaperServiceImpl implements NewspaperService {
 			String title = ParamUtil.getString(actionRequest, "title");
 			String content = ParamUtil.getString(actionRequest, "content");
 			Date date = new Date();
-			StatusEnums statusEnums = StatusEnums.UNCHECKED;
-			int status = statusEnums.getValue();
+			
 			long articleId = CounterLocalServiceUtil.increment(NewspaperPortlet.class.getName());
+			String user = portletUtils.getUserRole(actionRequest, actionResponse);
+			log.info(user);
+			StatusEnums statusEnums = StatusEnums.UNCHECKED;
+			if (user.equals("Editor") || user.equals("Administrator")) {
+				statusEnums = StatusEnums.PUBLISHED;
+			}
+			int status = statusEnums.getValue();
+			log.info(status);
 			
 			NewsArticle newsArticle = NewsArticleLocalServiceUtil.createNewsArticle(articleId);
 			newsArticle.setAuthorId(authorId);
@@ -211,23 +215,15 @@ public class NewspaperServiceImpl implements NewspaperService {
 			String commentContent = ParamUtil.getString(actionRequest, "comment");
 			String commentTitle = ParamUtil.getString(actionRequest, "title");
 			Date createDate = new Date();
-			//long authorId = themeDisplay.getUser().getUserId();
 			long authorImageId = themeDisplay.getUser().getPortraitId();
-			//long repositoryId = themeDisplay.getScopeGroupId();
 			log.info(authorImageId);
 			long commentId = CounterLocalServiceUtil.increment(NewspaperPortlet.class.getName());
 			long articleId = ParamUtil.getLong(actionRequest, "articleId");
-			
-			/*DLFileEntry image = DLFileEntryLocalServiceUtil.getFileEntry(authorImageId);
-			String imageUrl = "";
-			if (image != null) {
-			    imageUrl =
-			        PortalUtil.getPortalURL(actionRequest) + "/documents/" + image.getGroupId() + "/" +
-			            image.getFolderId() + "/" + image.getTitle() + "/" + image.getUuid() + "?t=" +
-			            System.currentTimeMillis();
-			}*/
-						
+			String userImageUrl = themeDisplay.getUser().getPortraitURL(themeDisplay);	
+			log.info(userImageUrl);
+
 			UserComment userComment = UserCommentLocalServiceUtil.createUserComment(commentId);
+			//userComment.setImageUrl(userImageUrl);
 			userComment.setAuthor(reviewerName);
 			userComment.setArticleId(articleId);
 			userComment.setCommentTitle(commentTitle);
@@ -235,7 +231,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 			userComment.setCreateDate(createDate);
 			userComment.setAuthorImageId(authorImageId);
 			UserCommentLocalServiceUtil.addUserComment(userComment);
-		} catch (SystemException /*| PortalException*/ e) {
+		} catch (SystemException | PortalException e) {
 			log.error("SystemException, check saveComment method." + e.getMessage());
 		}
 	}

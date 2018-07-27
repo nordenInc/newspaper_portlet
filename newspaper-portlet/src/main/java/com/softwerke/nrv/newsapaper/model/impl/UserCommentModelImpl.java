@@ -51,9 +51,10 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
             { "commentContent", Types.VARCHAR },
             { "createDate", Types.TIMESTAMP },
             { "authorImageId", Types.BIGINT },
-            { "commentTitle", Types.VARCHAR }
+            { "commentTitle", Types.VARCHAR },
+            { "imageUrl", Types.VARCHAR }
         };
-    public static final String TABLE_SQL_CREATE = "create table usercomment_data (commentId LONG not null primary key,articleId LONG,author VARCHAR(75) null,commentContent VARCHAR(75) null,createDate DATE null,authorImageId LONG,commentTitle VARCHAR(75) null)";
+    public static final String TABLE_SQL_CREATE = "create table usercomment_data (commentId LONG not null primary key,articleId LONG,author VARCHAR(75) null,commentContent VARCHAR(75) null,createDate DATE null,authorImageId LONG,commentTitle VARCHAR(75) null,imageUrl VARCHAR(75) null)";
     public static final String TABLE_SQL_DROP = "drop table usercomment_data";
     public static final String ORDER_BY_JPQL = " ORDER BY userComment.commentId ASC";
     public static final String ORDER_BY_SQL = " ORDER BY usercomment_data.commentId ASC";
@@ -80,6 +81,7 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
     private Date _createDate;
     private long _authorImageId;
     private String _commentTitle;
+    private String _imageUrl;
     private UserComment _escapedModel;
 
     public UserCommentModelImpl() {
@@ -126,6 +128,7 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
         attributes.put("createDate", getCreateDate());
         attributes.put("authorImageId", getAuthorImageId());
         attributes.put("commentTitle", getCommentTitle());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -172,6 +175,12 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
 
         if (commentTitle != null) {
             setCommentTitle(commentTitle);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -258,6 +267,20 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
     }
 
     @Override
+    public String getImageUrl() {
+        if (_imageUrl == null) {
+            return StringPool.BLANK;
+        } else {
+            return _imageUrl;
+        }
+    }
+
+    @Override
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
+    }
+
+    @Override
     public ExpandoBridge getExpandoBridge() {
         return ExpandoBridgeFactoryUtil.getExpandoBridge(0,
             UserComment.class.getName(), getPrimaryKey());
@@ -291,6 +314,7 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
         userCommentImpl.setCreateDate(getCreateDate());
         userCommentImpl.setAuthorImageId(getAuthorImageId());
         userCommentImpl.setCommentTitle(getCommentTitle());
+        userCommentImpl.setImageUrl(getImageUrl());
 
         userCommentImpl.resetOriginalValues();
 
@@ -382,12 +406,20 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
             userCommentCacheModel.commentTitle = null;
         }
 
+        userCommentCacheModel.imageUrl = getImageUrl();
+
+        String imageUrl = userCommentCacheModel.imageUrl;
+
+        if ((imageUrl != null) && (imageUrl.length() == 0)) {
+            userCommentCacheModel.imageUrl = null;
+        }
+
         return userCommentCacheModel;
     }
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(15);
+        StringBundler sb = new StringBundler(17);
 
         sb.append("{commentId=");
         sb.append(getCommentId());
@@ -403,6 +435,8 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
         sb.append(getAuthorImageId());
         sb.append(", commentTitle=");
         sb.append(getCommentTitle());
+        sb.append(", imageUrl=");
+        sb.append(getImageUrl());
         sb.append("}");
 
         return sb.toString();
@@ -410,7 +444,7 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
 
     @Override
     public String toXmlString() {
-        StringBundler sb = new StringBundler(25);
+        StringBundler sb = new StringBundler(28);
 
         sb.append("<model><model-name>");
         sb.append("com.softwerke.nrv.newsapaper.model.UserComment");
@@ -443,6 +477,10 @@ public class UserCommentModelImpl extends BaseModelImpl<UserComment>
         sb.append(
             "<column><column-name>commentTitle</column-name><column-value><![CDATA[");
         sb.append(getCommentTitle());
+        sb.append("]]></column-value></column>");
+        sb.append(
+            "<column><column-name>imageUrl</column-name><column-value><![CDATA[");
+        sb.append(getImageUrl());
         sb.append("]]></column-value></column>");
 
         sb.append("</model>");

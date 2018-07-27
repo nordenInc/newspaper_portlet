@@ -38,6 +38,7 @@
 			</basic>
 			<basic name="authorImageId" />
 			<basic name="commentTitle" />
+			<basic name="imageUrl" />
 			<transient name="modelAttributes" />
 			<transient name="primaryKey" />
 			<transient name="primaryKeyObj" />

@@ -10,7 +10,7 @@
 		crossorigin="anonymous">
 </script>
 
-<div class="main_title"><liferay-ui:message key="home_of_guardian"/></div><br>
+<div class="main_title"><liferay-ui:message key="home_of_guardian"/></div>
 
 <portlet:renderURL var = "redirectToAuthorCabinetUrl">
 	<portlet:param name = "page" value = "authorCabinet"/>
@@ -21,14 +21,17 @@
 </portlet:renderURL>
 
 <c:set var = "role"  value = "${userRole}"/> 
-
-<c:if test="${(role eq 'Administrator') || (role eq 'Author')}">
-	<a href = "${redirectToAuthorCabinetUrl}"><button type = "submit"><liferay-ui:message key="authors_cabinet"/></button></a>
-</c:if>
-
-<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
-	<a href = "${redirectToEditorCabinetUrl}"><button type = "submit"><liferay-ui:message key="editors_cabinet"/></button></a>
-</c:if>
+<div class="custom">
+	<div class="custom_buttons">
+		<c:if test="${(role eq 'Administrator') || (role eq 'Author')}">
+			<a class="cabinet_buttons" href = "${redirectToAuthorCabinetUrl}"><liferay-ui:message key="authors_cabinet"/></a>
+		</c:if>
+		
+		<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
+			<a class="cabinet_buttons " href = "${redirectToEditorCabinetUrl}"><liferay-ui:message key="editors_cabinet"/></a>
+		</c:if>
+	</div>
+</div>
 <br><br>
 
 <c:forEach items="${publishedArticles}" var="article"> 
@@ -49,18 +52,25 @@
 		<portlet:param name = "articleId" value = "${article.articleId}"/>
 	</portlet:actionURL>
 
-	<b>${article.title}</b><br>
-	${article.content}<br>
-	Author: ${article.author}<br>
 	
-	<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
-		<a href = "${redirectToUpdateArticleUrl}"><button onClick = 'updateWarning("${article.articleId}");' type = "submit">
-			<liferay-ui:message key="update"/></button>
-		</a>
-		<a href = "${deleteArticleUrl}" ><button onClick = 'deleteWarning("${article.articleId}");'>
-			<liferay-ui:message key="delete"/></button>
-		</a>
-	</c:if>
+	<div class="article_title">${article.title}</div>
+	<div class="article_content">${article.content}</div>
+	
+	<div class="article_content">Author: ${article.author}</div>
+	
+	<div class="custom">
+		<div class="custom_buttons">
+			<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
+				<a class="article_buttons" href="${redirectToUpdateArticleUrl}" onClick = 'updateWarning("${article.articleId}");'>
+					<liferay-ui:message key="update"/>
+				</a>
+				<a class="article_buttons" href="${deleteArticleUrl}" onClick = 'deleteWarning("${article.articleId}");'>
+					<liferay-ui:message key="delete"/>
+				</a>
+			</c:if>
+		</div>
+	</div>
+	
 	<br><br>
 	
 	<liferay-ui:message key="comments"/>:
@@ -72,9 +82,6 @@
 		<portlet:actionURL var = "deleteCommentUrl" name = "deleteComment">
 			<portlet:param name = "commentId" value = "${comment.commentId}"/>
 		</portlet:actionURL>
-		<img src="imageDisplayProcess.do?pKey=<c:out value="${comment.authorImageId}" />"
-                             width="30" height="30"
-                             onError="loadImage()" onAbort="loadImage()" />
 		<liferay-ui:message key="author"/>:
 		${comment.author}<br>
 		<liferay-ui:message key="date"/>:

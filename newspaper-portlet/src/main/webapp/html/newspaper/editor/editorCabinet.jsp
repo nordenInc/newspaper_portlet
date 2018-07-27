@@ -12,11 +12,14 @@
 	<portlet:param name="page" value="waitingForCheckArticles"/>
 </portlet:renderURL>
 
+<portlet:actionURL var="saveArticleUrl" name="saveArticle">
+</portlet:actionURL>
+
 <a href = "${redirectToHomeUrl}"><button type = "submit" ><liferay-ui:message key="news"/></button></a>
 <a href = "${redirectToWaitingForCheckArticlesUrl}"><button type = "submit" style="float:right"><liferay-ui:message key="articles_to_check"/></button></a>
 <br><br>
 
-<aui:form action = "to do action" method = "post" >
+<aui:form action = "${saveArticleUrl}" method = "post" >
 	<liferay-ui:message key="new_article"/>:<br><br>
 	<aui:input type = "text" name = "title"/>
 	<aui:input type = "text" name = "content"/>
