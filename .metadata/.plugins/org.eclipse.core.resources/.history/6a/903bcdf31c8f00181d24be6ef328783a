@@ -1,0 +1,18 @@
+package com.softwerke.nrv.newspaper.util;
+
+public enum StatusEnums {
+	UNCHECKED(1), CHECKED(2), PUBLISHED(3);
+	
+	int key;
+	
+	StatusEnums(int key) {
+		this.key = key;
+	}
+	
+	StatusEnums getStatus(int status) {
+		if (status == 1) {return UNCHECKED;}
+		else if (status == 2) { return CHECKED; }
+        else if (status == 3) { return PUBLISHED; }
+        else throw new IllegalArgumentException();
+	}
+}

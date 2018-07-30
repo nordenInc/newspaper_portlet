@@ -1,0 +1,24 @@
+home_of_guardian=Home of The Guardian
+authors_cabinet=Author's cabinet
+editors_cabinet=Editor's cabinet
+update=Update
+delete=Delete
+comments=Comments
+author=Author
+date=Publish date
+show_all_comments=Show all comments
+delete_comment=Delete comment
+leave_a_comment=Leave a comment
+
+authors_cabinet=Author's cabinet
+news=News
+write_new_article=Write new article
+article_title=Article Title
+article_text=Article Text
+status=Status
+actions=Actions
+create_date=Create Date
+editors_comment=Editor's comment
+unchecked=Unchecked
+checked=Checked
+published=Published

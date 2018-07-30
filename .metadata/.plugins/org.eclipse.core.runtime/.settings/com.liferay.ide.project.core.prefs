@@ -1,0 +1,5 @@
+create-new-portlet=false
+default-project-maven-groupid=com.softwerke.nrv.newsapaper
+eclipse.preferences.version=1
+include-sample-code=true
+project-default-build-type-option=maven

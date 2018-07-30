@@ -1,0 +1,42 @@
+package com.softwerke.nrv.newspaper.util;
+
+public enum StatusEnums {
+	UNCHECKED(1), CHECKED(2), PUBLISHED(3);
+	
+	private final int value;
+    private StatusEnums(int value){
+        this.value = value;
+    }
+    
+    public int getValue() {
+        return value;
+    }
+    
+    public static int getStatusUnchecked() {
+    	StatusEnums statusEnums = StatusEnums.UNCHECKED;
+        return statusEnums.getValue();
+    }
+    
+    public static int getStatusChecked() {
+    	StatusEnums statusEnums = StatusEnums.CHECKED;
+        return statusEnums.getValue();
+    }
+    
+    public static int getSatusPublished() {
+    	StatusEnums statusEnums = StatusEnums.PUBLISHED;
+        return statusEnums.getValue();
+    }
+	
+	public StatusEnums fromInteger(int status) {
+		switch(status) {
+        case 1:
+            return UNCHECKED;
+        case 2:
+            return CHECKED;
+        case 3:
+        	return PUBLISHED;
+        }
+        return null;
+	}
+		
+}

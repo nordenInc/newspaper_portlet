@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.softwerke.nrv.newsapaper.model.NewsArticle">
+		<field name="articleId" type="long" />
+		<field name="author" type="String" />
+		<field name="title" type="String" />
+		<field name="content" type="String" />
+		<field name="status" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="editorComment" type="String" />
+		<field name="updateDate" type="Date" />
+		<field name="authorId" type="long" />
+	</model>
+	<model name="com.softwerke.nrv.newsapaper.model.UserComment">
+		<field name="commentId" type="long" />
+		<field name="articleId" type="long" />
+		<field name="author" type="String" />
+		<field name="commentContent" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="authorImageId" type="long" />
+		<field name="commentTitle" type="String" />
+		<field name="imageUrl" type="String" />
+	</model>
+</model-hints>

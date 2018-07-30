@@ -1,0 +1,26 @@
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
+
+<b>Author's cabinet</b><br><br>
+
+<portlet:renderURL var="redirectToHomeUrl">
+	<portlet:param name="page" value="home"/>
+</portlet:renderURL>
+
+<portlet:renderURL var="redirectToAuthorArticlesUrl">
+	<portlet:param name="page" value="authorArticles"/>
+</portlet:renderURL>
+
+<portlet:actionURL var="saveArticleUrl" name="saveArticle">
+</portlet:actionURL>
+
+<a href="${redirectToHomeUrl}"><button type="submit" >News</button></a>
+<a href="${redirectToAuthorArticlesUrl}"><button type="submit" style="float:right">My articles</button></a>
+<br><br>
+
+<aui:form action = "${saveArticleUrl}" method = "post" >
+	New article:<br><br>
+	<aui:input type = "text" name = "title"/>
+	<aui:input type = "text" name = "content"/>
+	<button type = "submit">Send article to editor</button>
+</aui:form>

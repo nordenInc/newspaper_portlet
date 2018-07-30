@@ -1,0 +1,3 @@
+package com.softwerke.nrv.newspaper.util;
+
+public enum StatusEnums {UNCHECKED, CHECKED, PUBLISHED}

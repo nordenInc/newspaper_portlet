@@ -1,0 +1,20 @@
+home_of_guardian=Новости Гвардина
+authors_cabinet=Кабинет автора
+editors_cabinet=Кабинет редактора
+update=Редактировать
+delete=Удалить
+comments=Комментарии
+author=Автор
+date=Дата публикации
+show_all_comments=Показать все комментарии
+delete_comment=Удалить комментарий
+leave_a_comment=Оставить комментарий
+
+news=Новости
+write_new_article=Написать новыую статью
+article_title=Заголовок статьи
+article_text=Текст статьи
+status=Статус
+actions=Действия
+create_date=Дата создания
+editors_comment=Комментарий редактора 

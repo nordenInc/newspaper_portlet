@@ -1,0 +1,23 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.softwerke.nrv.newsapaper">
+	<namespace>newspaper</namespace>
+    <entity name="NewsArticle" local-service="true" remote-service="false" table="newsartcile_data">
+        <column name="articleId" type="long" primary="true"></column>
+        <column name="authorId" type="long"></column>
+        <column name="author" type="String"></column>
+        <column name="title" type="String"></column>
+        <column name="content" type="String" convert-null="true"></column>
+        <column name="status" type="int"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="editorComment" type="String"></column>
+        <column name="updateDate" type="Date"></column>
+    </entity>
+    <entity name="UserComment" local-service="true" remote-service="false" table="usercomment_data">
+        <column name="commentId" type="long" primary="true"></column>
+        <column name="articleId" type="long" primary="false"></column>
+        <column name="author" type="String"></column>
+        <column name="commentContent" type="String"></column>
+        <column name="createDate" type="Date"></column>
+    </entity>
+</service-builder>

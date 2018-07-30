@@ -1,0 +1,67 @@
+package com.softwerke.nrv.newspaper.util;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public enum StatusEnums {
+	UNCHECKED(1), CHECKED(2), PUBLISHED(3);
+	
+	private int value;
+	private static Map<Object,Object> map = new HashMap<>();
+	
+	private StatusEnums(int value) {
+		this.value = value;
+	}
+	
+	static {
+        for (StatusEnums statusEnums : StatusEnums.values()) {
+            map.put(statusEnums.value, statusEnums);
+        }
+    }
+	
+	public static StatusEnums valueOf(int statusEnums) {
+        return (StatusEnums) map.get(statusEnums);
+    }
+	
+	public int getValue() {
+        return value;
+    }
+	
+	
+	
+    /*private StatusEnums(int value){
+        this.value = value;
+    }
+    
+    public int getValue() {
+        return value;
+    }
+    
+    public int setStatusUnchecked() {
+    	StatusEnums statusEnums = StatusEnums.UNCHECKED;
+        return statusEnums.getValue();
+    }
+    
+    public int setStatusChecked() {
+    	StatusEnums statusEnums = StatusEnums.CHECKED;
+        return statusEnums.getValue();
+    }
+    
+    public int setSatusPublished() {
+    	StatusEnums statusEnums = StatusEnums.PUBLISHED;
+        return statusEnums.getValue();
+    }
+	
+	public StatusEnums fromInteger(int status) {
+		switch(status) {
+        case 1:
+            return UNCHECKED;
+        case 2:
+            return CHECKED;
+        case 3:
+        	return PUBLISHED;
+        }
+        return null;
+	}*/
+		
+}

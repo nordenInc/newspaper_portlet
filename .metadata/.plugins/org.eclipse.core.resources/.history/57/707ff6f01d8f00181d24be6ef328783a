@@ -1,0 +1,18 @@
+package com.softwerke.nrv.newspaper.util;
+
+public enum StatusEnums {
+	UNCHECKED, CHECKED, PUBLISHED;
+	
+	public StatusEnums fromInteger(int status) {
+		switch(status) {
+        case 1:
+            return UNCHECKED;
+        case 2:
+            return CHECKED;
+        case 3:
+        	return PUBLISHED;
+        }
+        return null;
+	}
+		
+}

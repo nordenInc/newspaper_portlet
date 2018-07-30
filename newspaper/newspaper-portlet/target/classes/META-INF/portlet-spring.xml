@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.softwerke.nrv.newsapaper.service.NewsArticleLocalService" class="com.softwerke.nrv.newsapaper.service.impl.NewsArticleLocalServiceImpl" />
+	<bean id="com.softwerke.nrv.newsapaper.service.persistence.NewsArticlePersistence" class="com.softwerke.nrv.newsapaper.service.persistence.NewsArticlePersistenceImpl" parent="basePersistence" />
+	<bean id="com.softwerke.nrv.newsapaper.service.UserCommentLocalService" class="com.softwerke.nrv.newsapaper.service.impl.UserCommentLocalServiceImpl" />
+	<bean id="com.softwerke.nrv.newsapaper.service.persistence.UserCommentPersistence" class="com.softwerke.nrv.newsapaper.service.persistence.UserCommentPersistenceImpl" parent="basePersistence" />
+</beans>
