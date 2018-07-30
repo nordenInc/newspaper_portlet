@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.softwerke.nrv.newsapaper.model.impl.NewsArticleModelImpl">
+		<attributes>
+			<id name="articleId" />
+			<basic name="author" />
+			<basic name="title" />
+			<basic name="content" />
+			<basic name="status" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="editorComment" />
+			<basic name="updateDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="authorId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.softwerke.nrv.newsapaper.model.impl.UserCommentModelImpl">
+		<attributes>
+			<id name="commentId" />
+			<basic name="articleId" />
+			<basic name="author" />
+			<basic name="commentContent" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="authorImageId" />
+			<basic name="commentTitle" />
+			<basic name="imageUrl" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.softwerke.nrv.newsapaper.model.impl.NewsArticleImpl" name="NewsArticle">
+		<table name="newsartcile_data" />
+		<attributes />
+	</entity>
+	<entity class="com.softwerke.nrv.newsapaper.model.impl.UserCommentImpl" name="UserComment">
+		<table name="usercomment_data" />
+		<attributes />
+	</entity>
+</entity-mappings>
