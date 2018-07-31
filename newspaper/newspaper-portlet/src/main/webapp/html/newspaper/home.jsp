@@ -76,6 +76,8 @@
 	<br>
 
 	<c:forEach items="${userComments}" var="comment">
+		<c:if test="${comment.articleId eq article.articleId}">
+
 		<portlet:actionURL var = "deleteCommentUrl" name = "deleteComment">
 			<portlet:param name = "commentId" value = "${comment.commentId}"/>
 		</portlet:actionURL>
@@ -98,12 +100,13 @@
 				</div>
 			</div>
 		</div>
+		</c:if>
 	</c:forEach>
 	
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor') || (role eq 'Author') || (role eq 'Reviewer')}">
 	
 	<aui:form action = "${saveCommentUrl}" method = "post" >
-		<aui:input class="field" type = "text" name = "title"/>
+		<aui:input class = "field" type = "text" name = "title"/>
 		<aui:input type = "text" name = "comment"/>
 		<button type = "submit"><liferay-ui:message key="leave_a_comment"/></button>	
 	</aui:form>

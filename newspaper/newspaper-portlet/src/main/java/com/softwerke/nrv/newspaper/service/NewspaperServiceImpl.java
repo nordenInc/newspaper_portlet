@@ -30,6 +30,8 @@ public class NewspaperServiceImpl implements NewspaperService {
 	
 	private static final Log log = LogFactoryUtil.getLog(NewspaperServiceImpl.class); 
 	private PortletUtils portletUtils = new PortletUtils();
+	private static final String EDITOR = "Editor";
+	private static final String ADMINISTRATOR = "Administrator";
 	
 	private static volatile NewspaperServiceImpl newspaperServiceImpl;
 	private NewspaperServiceImpl() {}
@@ -61,10 +63,12 @@ public class NewspaperServiceImpl implements NewspaperService {
 			
 			String user = portletUtils.getUserRole(actionRequest, actionResponse);
 			StatusEnums statusEnums = StatusEnums.UNCHECKED;
-			if (user.equals("Editor") || user.equals("Administrator")) {
+			if (user.equals(EDITOR) || user.equals(ADMINISTRATOR)) {
 				statusEnums = StatusEnums.PUBLISHED;
 			}
+			log.info(statusEnums);
 			int status = statusEnums.getValue();
+			log.info(status);
 			
 			NewsArticle newsArticle = NewsArticleLocalServiceUtil.createNewsArticle(articleId);
 			newsArticle.setAuthorId(authorId);
@@ -102,14 +106,14 @@ public class NewspaperServiceImpl implements NewspaperService {
 			String title = ParamUtil.getString(actionRequest, "title");
 			String content = ParamUtil.getString(actionRequest, "content");
 			String editorComment = ParamUtil.getString(actionRequest, "editorComment");
-			
-			StatusEnums statusEnums = StatusEnums.CHECKED;
-			int status = statusEnums.getValue();
+			int status = StatusEnums.CHECKED.getValue();
+			Date date = new Date();
 			
 			NewsArticle newsArticle = NewsArticleLocalServiceUtil.fetchNewsArticle(newsArticleId);
 			newsArticle.setTitle(title);
 			newsArticle.setContent(content);
 			newsArticle.setStatus(status);
+			newsArticle.setUpdateDate(date);
 			newsArticle.setEditorComment(editorComment);
 			NewsArticleLocalServiceUtil.updateNewsArticle(newsArticle);
 		} catch (SystemException e) {
@@ -122,8 +126,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 		
 		try {
 			long newsArticleId = ParamUtil.getLong(actionRequest, "articleId");
-			StatusEnums statusEnums = StatusEnums.PUBLISHED;
-			int status = statusEnums.getValue();
+			int status = StatusEnums.PUBLISHED.getValue();
 			
 			NewsArticle newsArticle = NewsArticleLocalServiceUtil.fetchNewsArticle(newsArticleId);
 			newsArticle.setStatus(status);
@@ -140,8 +143,8 @@ public class NewspaperServiceImpl implements NewspaperService {
 			List<NewsArticle> publishedArticles = new ArrayList<>();
 			List<NewsArticle> myArticles = NewsArticleLocalServiceUtil.getNewsArticles(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
 			for (NewsArticle myArticle: myArticles) {
-				StatusEnums statusEnums = StatusEnums.valueOf(myArticle.getStatus());
-				if(statusEnums.equals(StatusEnums.PUBLISHED)) {
+				StatusEnums statusEnums = StatusEnums.byNumber(myArticle.getStatus());
+				if(statusEnums == StatusEnums.PUBLISHED) {
 					publishedArticles.add(myArticle);
 				}
 			}
@@ -177,7 +180,8 @@ public class NewspaperServiceImpl implements NewspaperService {
 			List<NewsArticle> myEditorArticles = new ArrayList<>();
 			List<NewsArticle> myArticles = NewsArticleLocalServiceUtil.getNewsArticles(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
 			for (NewsArticle myArticle: myArticles) {
-				StatusEnums statusEnums = StatusEnums.valueOf(myArticle.getStatus());
+				StatusEnums statusEnums = StatusEnums.byNumber(myArticle.getStatus());
+				log.info(statusEnums);
 				if ((statusEnums.equals(StatusEnums.CHECKED)) || 
 						(statusEnums.equals(StatusEnums.UNCHECKED))) { 
 					myEditorArticles.add(myArticle);

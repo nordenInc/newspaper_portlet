@@ -7,15 +7,15 @@ import javax.portlet.RenderResponse;
 
 public interface NewspaperService {
 	
-	public void saveArticle(ActionRequest actionRequest, ActionResponse actionResponse);
+	void saveArticle(ActionRequest actionRequest, ActionResponse actionResponse);
 	
-	public void deleteArticle(ActionRequest actionRequest, ActionResponse actionResponse);
+	void deleteArticle(ActionRequest actionRequest, ActionResponse actionResponse);
 	
-	public void updateArticle(ActionRequest actionRequest, ActionResponse actionResponse);
+	void updateArticle(ActionRequest actionRequest, ActionResponse actionResponse);
 	
-	public void publishArticle(ActionRequest actionRequest,ActionResponse actionResponse);
+	void publishArticle(ActionRequest actionRequest,ActionResponse actionResponse);
 	
-	public void showPublishedArticles(RenderRequest renderRequest, RenderResponse renderResponse);
+	void showPublishedArticles(RenderRequest renderRequest, RenderResponse renderResponse);
 	
 	public void showAuthorArticles(RenderRequest renderRequest, RenderResponse renderResponse);
 	

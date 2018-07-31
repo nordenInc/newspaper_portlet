@@ -17,6 +17,11 @@ import com.liferay.portal.theme.ThemeDisplay;
 public class PortletUtils {
 	
 	private static final Log log = LogFactoryUtil.getLog(PortletUtils.class); 
+	private static final String USER = "User";
+	private static final String AUTHOR = "Author";
+	private static final String EDITOR = "Editor";
+	private static final String REVIEWER = "Reviewer";
+	private static final String ADMINISTRATOR = "Administrator";
 	
 	public String getUserRole(PortletRequest portletRequest, PortletResponse portletResponse) {
 		
@@ -25,12 +30,12 @@ public class PortletUtils {
 			ThemeDisplay themeDisplay = (ThemeDisplay) portletRequest.getAttribute(WebKeys.THEME_DISPLAY); 
 			long currentUserId = themeDisplay.getUserId();
 			List<Role> defaultRoles =  RoleLocalServiceUtil.getUserRoles(currentUserId);
-			Role role = RoleLocalServiceUtil.getRole(themeDisplay.getCompanyId(), "User");
+			Role role = RoleLocalServiceUtil.getRole(themeDisplay.getCompanyId(), USER);
 			long roleId = role.getRoleId();
 			
 			for (Role defaultRole:defaultRoles) {
-				if ((defaultRole.getName().equals("Administrator")) || (defaultRole.getName().equals("Editor")) ||
-						(defaultRole.getName().equals("Author")) || (defaultRole.getName().equals("Reviewer"))) {
+				if ((defaultRole.getName().equals(ADMINISTRATOR)) || (defaultRole.getName().equals(EDITOR)) ||
+						(defaultRole.getName().equals(AUTHOR)) || (defaultRole.getName().equals(REVIEWER))) {
 					roleId = defaultRole.getRoleId();
 				}
 			}
