@@ -2,7 +2,7 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
 
-<b><liferay-ui:message key="editors_cabinet"/></b><br><br>
+<div class="cabinet_title"><liferay-ui:message key="editors_cabinet"/></div>
 
 <portlet:renderURL var="redirectToHomeUrl">
 	<portlet:param name="page" value="home"/>
@@ -15,12 +15,15 @@
 <portlet:actionURL var="saveArticleUrl" name="saveArticle">
 </portlet:actionURL>
 
-<a href = "${redirectToHomeUrl}"><button type = "submit" ><liferay-ui:message key="news"/></button></a>
-<a href = "${redirectToWaitingForCheckArticlesUrl}"><button type = "submit" style="float:right"><liferay-ui:message key="articles_to_check"/></button></a>
-<br><br>
+<div class="custom">
+	<div class="custom_buttons">
+		<a class="cabinet_buttons_left" href = "${redirectToHomeUrl}"><liferay-ui:message key="news"/></a>
+		<a class="cabinet_buttons" href = "${redirectToWaitingForCheckArticlesUrl}"><liferay-ui:message key="articles_to_check"/></a>
+	</div>
+</div>
 
 <aui:form action = "${saveArticleUrl}" method = "post" >
-	<liferay-ui:message key="new_article"/>:<br><br>
+	<div class="cabinet_article"><liferay-ui:message key="new_article"/>:</div>
 	<aui:input type = "text" name = "title"/>
 	<aui:input type = "text" name = "content"/>
 	<button type = "submit"><liferay-ui:message key="publish"/></button>

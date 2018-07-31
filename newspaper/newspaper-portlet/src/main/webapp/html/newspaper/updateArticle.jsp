@@ -5,7 +5,7 @@
 
 <portlet:defineObjects />
 
-<b><liferay-ui:message key="article_updater"/></b><br><br>
+<div class="cabinet_title"><liferay-ui:message key="article_updater"/></div>
 
 <portlet:renderURL var="redirectToHomeUrl">
 	<portlet:param name="page" value="home"/>
@@ -15,11 +15,14 @@
 	<portlet:param name = "articleId" value = "${param.articleId}"/>
 </portlet:actionURL>
 
-<a href="${redirectToHomeUrl}"><button type="submit" ><liferay-ui:message key="news"/></button></a>
-<br><br>
+<div class="custom">
+	<div class="custom_buttons">
+		<a class="cabinet_buttons_left" href="${redirectToHomeUrl}"><liferay-ui:message key="news"/></a>
+	</div>
+</div>
 
 <aui:form action = "${updateArticleUrl}" method = "post" >
-	<liferay-ui:message key="article"/>:<br><br>
+	<div class="cabinet_article"><liferay-ui:message key="article"/>:</div>
 	<aui:input type = "text" name = "title" value = "${newsArticle.title}"/>
 	<aui:input type = "text" name = "content" value = "${newsArticle.content}"/>
 	<aui:input type = "text" name = "editorComment" value = "${newsArticle.editorComment}"/>

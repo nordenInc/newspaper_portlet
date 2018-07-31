@@ -10,7 +10,7 @@
 <script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
 
-<b><liferay-ui:message key="authors_cabinet"/></b><br><br>
+<div class="cabinet_title"><liferay-ui:message key="authors_cabinet"/></div>
 
 <portlet:renderURL var = "redirectToHomeUrl">
 	<portlet:param name = "page" value = "home"/>
@@ -20,9 +20,13 @@
 	<portlet:param name = "page" value = "authorCabinet"/>
 </portlet:renderURL>
 
-<a href="${redirectToHomeUrl}"><button type="submit" ><liferay-ui:message key="news"/></button></a>
-<a href = "${redirectToAuthorCabinetUrl}"><button type = "submit" style="float:right"><liferay-ui:message key="write_new_article"/></button></a>
-<br><br>
+<div class="custom">
+	<div class="custom_buttons">
+		<a class="cabinet_buttons_left" href="${redirectToHomeUrl}"><liferay-ui:message key="news"/></a>
+		<a class="cabinet_buttons" href="${redirectToAuthorCabinetUrl}"><liferay-ui:message key="write_new_article"/></a>
+	</div>
+</div>
+<br><br><br>
 
 <table id="articleTableAuthor" class="articleTableAuthor">
 

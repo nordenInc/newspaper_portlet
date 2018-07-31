@@ -102,14 +102,14 @@
 	
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor') || (role eq 'Author') || (role eq 'Reviewer')}">
 	
-	<aui:form style="margin-bottom: 5px;" action = "${saveCommentUrl}" method = "post" >
-		<aui:input type = "text" name = "title"/>
+	<aui:form action = "${saveCommentUrl}" method = "post" >
+		<aui:input class="field" type = "text" name = "title"/>
 		<aui:input type = "text" name = "comment"/>
-		<button type = "submit"><liferay-ui:message key="leave_a_comment"/></button>		
+		<button type = "submit"><liferay-ui:message key="leave_a_comment"/></button>	
 	</aui:form>
-
 	
 	</c:if>
+	<br>
 </c:forEach>
 
 <script>
