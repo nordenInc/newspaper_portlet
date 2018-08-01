@@ -47,6 +47,7 @@ public class NewsArticleWrapper implements NewsArticle,
         attributes.put("editorComment", getEditorComment());
         attributes.put("updateDate", getUpdateDate());
         attributes.put("authorId", getAuthorId());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -105,6 +106,12 @@ public class NewsArticleWrapper implements NewsArticle,
 
         if (authorId != null) {
             setAuthorId(authorId);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -306,6 +313,26 @@ public class NewsArticleWrapper implements NewsArticle,
     @Override
     public void setAuthorId(long authorId) {
         _newsArticle.setAuthorId(authorId);
+    }
+
+    /**
+    * Returns the image url of this news article.
+    *
+    * @return the image url of this news article
+    */
+    @Override
+    public java.lang.String getImageUrl() {
+        return _newsArticle.getImageUrl();
+    }
+
+    /**
+    * Sets the image url of this news article.
+    *
+    * @param imageUrl the image url of this news article
+    */
+    @Override
+    public void setImageUrl(java.lang.String imageUrl) {
+        _newsArticle.setImageUrl(imageUrl);
     }
 
     @Override

@@ -30,6 +30,7 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
     private String _editorComment;
     private Date _updateDate;
     private long _authorId;
+    private String _imageUrl;
     private BaseModel<?> _newsArticleRemoteModel;
     private Class<?> _clpSerializerClass = com.softwerke.nrv.newsapaper.service.ClpSerializer.class;
 
@@ -79,6 +80,7 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
         attributes.put("editorComment", getEditorComment());
         attributes.put("updateDate", getUpdateDate());
         attributes.put("authorId", getAuthorId());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -137,6 +139,12 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
 
         if (authorId != null) {
             setAuthorId(authorId);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -338,6 +346,28 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
         }
     }
 
+    @Override
+    public String getImageUrl() {
+        return _imageUrl;
+    }
+
+    @Override
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
+
+        if (_newsArticleRemoteModel != null) {
+            try {
+                Class<?> clazz = _newsArticleRemoteModel.getClass();
+
+                Method method = clazz.getMethod("setImageUrl", String.class);
+
+                method.invoke(_newsArticleRemoteModel, imageUrl);
+            } catch (Exception e) {
+                throw new UnsupportedOperationException(e);
+            }
+        }
+    }
+
     public BaseModel<?> getNewsArticleRemoteModel() {
         return _newsArticleRemoteModel;
     }
@@ -414,6 +444,7 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
         clone.setEditorComment(getEditorComment());
         clone.setUpdateDate(getUpdateDate());
         clone.setAuthorId(getAuthorId());
+        clone.setImageUrl(getImageUrl());
 
         return clone;
     }
@@ -463,7 +494,7 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(19);
+        StringBundler sb = new StringBundler(21);
 
         sb.append("{articleId=");
         sb.append(getArticleId());
@@ -483,6 +514,8 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
         sb.append(getUpdateDate());
         sb.append(", authorId=");
         sb.append(getAuthorId());
+        sb.append(", imageUrl=");
+        sb.append(getImageUrl());
         sb.append("}");
 
         return sb.toString();
@@ -490,7 +523,7 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
 
     @Override
     public String toXmlString() {
-        StringBundler sb = new StringBundler(31);
+        StringBundler sb = new StringBundler(34);
 
         sb.append("<model><model-name>");
         sb.append("com.softwerke.nrv.newsapaper.model.NewsArticle");
@@ -531,6 +564,10 @@ public class NewsArticleClp extends BaseModelImpl<NewsArticle>
         sb.append(
             "<column><column-name>authorId</column-name><column-value><![CDATA[");
         sb.append(getAuthorId());
+        sb.append("]]></column-value></column>");
+        sb.append(
+            "<column><column-name>imageUrl</column-name><column-value><![CDATA[");
+        sb.append(getImageUrl());
         sb.append("]]></column-value></column>");
 
         sb.append("</model>");

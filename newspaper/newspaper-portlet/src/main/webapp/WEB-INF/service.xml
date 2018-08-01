@@ -12,6 +12,7 @@
         <column name="editorComment" type="String"></column>
         <column name="updateDate" type="Date"></column>
         <column name="authorId" type="long"></column>
+        <column name="imageUrl" type="String"></column>
     </entity>
     <entity name="UserComment" local-service="true" remote-service="false" table="usercomment_data">
         <column name="commentId" type="long" primary="true"></column>

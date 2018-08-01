@@ -48,7 +48,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 		}
 		return localNewspaperServiceImpl;
 	}
-
+	
 	@Override
 	public void saveArticle(ActionRequest actionRequest, ActionResponse actionResponse) {
 		
@@ -56,6 +56,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 			ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY); 
 			long authorId = themeDisplay.getUserId();
 			long articleId = CounterLocalServiceUtil.increment(NewspaperPortlet.class.getName());
+			String imageUrl = themeDisplay.getUser().getPortraitURL(themeDisplay);
 			String authorName = themeDisplay.getUser().getFullName();
 			String title = ParamUtil.getString(actionRequest, "title");
 			String content = ParamUtil.getString(actionRequest, "content");
@@ -66,9 +67,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 			if (user.equals(EDITOR) || user.equals(ADMINISTRATOR)) {
 				statusEnums = StatusEnums.PUBLISHED;
 			}
-			log.info(statusEnums);
 			int status = statusEnums.getValue();
-			log.info(status);
 			
 			NewsArticle newsArticle = NewsArticleLocalServiceUtil.createNewsArticle(articleId);
 			newsArticle.setAuthorId(authorId);
@@ -77,9 +76,13 @@ public class NewspaperServiceImpl implements NewspaperService {
 			newsArticle.setContent(content);
 			newsArticle.setStatus(status);
 			newsArticle.setCreateDate(date);
+			newsArticle.setImageUrl(imageUrl);
 			NewsArticleLocalServiceUtil.addNewsArticle(newsArticle);
 		} catch (SystemException e) {
 			log.error("SystemException, check saveArticle method." + e.getMessage());
+		} catch (PortalException e) {
+			log.error("PortalException, check saveArticle method." + e.getMessage());
+			e.printStackTrace();
 		}		
 	}
 
@@ -181,7 +184,6 @@ public class NewspaperServiceImpl implements NewspaperService {
 			List<NewsArticle> myArticles = NewsArticleLocalServiceUtil.getNewsArticles(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
 			for (NewsArticle myArticle: myArticles) {
 				StatusEnums statusEnums = StatusEnums.byNumber(myArticle.getStatus());
-				log.info(statusEnums);
 				if ((statusEnums.equals(StatusEnums.CHECKED)) || 
 						(statusEnums.equals(StatusEnums.UNCHECKED))) { 
 					myEditorArticles.add(myArticle);
@@ -216,7 +218,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 			ThemeDisplay themeDisplay = (ThemeDisplay) actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
 			long commentId = CounterLocalServiceUtil.increment(NewspaperPortlet.class.getName());
 			long articleId = ParamUtil.getLong(actionRequest, "articleId");
-			long authorImageId = themeDisplay.getUser().getPortraitId();
+			String imageUrl = themeDisplay.getUser().getPortraitURL(themeDisplay);
 			String reviewerName = themeDisplay.getUser().getFullName();
 			String commentContent = ParamUtil.getString(actionRequest, "comment");
 			String commentTitle = ParamUtil.getString(actionRequest, "title");
@@ -228,10 +230,13 @@ public class NewspaperServiceImpl implements NewspaperService {
 			userComment.setCommentTitle(commentTitle);
 			userComment.setCommentContent(commentContent);
 			userComment.setCreateDate(createDate);
-			userComment.setAuthorImageId(authorImageId);
+			userComment.setImageUrl(imageUrl);
 			UserCommentLocalServiceUtil.addUserComment(userComment);
 		} catch (SystemException e) {
 			log.error("SystemException, check saveComment method." + e.getMessage());
+		} catch (PortalException e) {
+			log.error("PortalException, check saveComment method." + e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	

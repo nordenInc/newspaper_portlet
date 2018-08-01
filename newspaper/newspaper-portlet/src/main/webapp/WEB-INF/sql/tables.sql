@@ -7,7 +7,8 @@ create table newsartcile_data (
 	createDate DATE null,
 	editorComment VARCHAR(75) null,
 	updateDate DATE null,
-	authorId LONG
+	authorId LONG,
+	imageUrl VARCHAR(75) null
 );
 
 create table usercomment_data (

@@ -7935,3 +7935,260 @@ org.eclipse.core.runtime.CoreException: Launch configuration Driver references n
 2018-07-31 11:42:58,047 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2018-07-31 11:42:58,048 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-07-31 11:42:58,048 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 14:15:52,424 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:15:53,005 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 14:15:53,009 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:15:53,009 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 14:32:11,240 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:32:11,241 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 14:32:11,243 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:32:11,243 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 14:32:43,154 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:32:43,155 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 14:32:43,158 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 14:32:43,158 [Worker-92] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:03:21,798 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:03:21,798 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:03:21,799 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:03:21,800 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:05:23,335 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:05:23,335 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:05:23,337 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:05:23,337 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:05:51,761 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:05:51,762 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:05:51,763 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:05:51,763 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:06:05,306 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:06:05,306 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:06:05,308 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:06:05,308 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:07:25,983 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:07:25,983 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:07:25,985 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:07:25,985 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:08:06,591 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:08:06,591 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 15:08:06,593 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:08:06,593 [Worker-98] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:10:15,269 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:10:15,270 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:10:15,273 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:10:15,273 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:10:22,507 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:10:22,508 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:10:22,510 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:10:22,510 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:51:16,868 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:51:16,870 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:51:16,873 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:51:16,873 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:55:21,540 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:55:21,541 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:55:21,543 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:55:21,543 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:55:29,375 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:55:29,376 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:55:29,379 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:55:29,379 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:56:03,891 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:03,892 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:56:03,895 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:03,895 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:56:11,054 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:11,055 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:56:11,058 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:11,058 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:56:32,774 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:32,775 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:56:32,778 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:56:32,778 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:58:17,841 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:58:17,842 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:58:17,845 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:58:17,845 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 15:58:44,163 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:58:44,164 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 15:58:44,167 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 15:58:44,167 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:02:24,040 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:02:24,041 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:02:24,043 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:02:24,043 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:07:11,210 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:07:11,211 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:07:11,214 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:07:11,214 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:10:01,296 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:10:01,297 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:10:01,299 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:10:01,299 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:12:53,022 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:12:53,023 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:12:53,025 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:12:53,025 [Worker-128] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:14:56,963 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:14:56,963 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:14:56,966 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:14:56,966 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:15:04,647 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:15:04,648 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:15:04,651 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:15:04,651 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 16:18:59,873 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:18:59,874 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 16:18:59,877 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 16:18:59,877 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 17:04:09,014 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:04:09,015 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 17:04:09,018 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:04:09,018 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 17:07:46,238 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:07:46,238 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-07-31 17:07:46,239 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:07:46,239 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-07-31 17:20:45,989 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:20:45,990 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-07-31 17:20:45,993 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-07-31 17:20:45,993 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:14:44,516 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:14:44,547 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:14:44,579 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:14:44,579 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:22:37,144 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:22:37,160 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:22:37,160 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:22:37,160 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:22:46,128 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:22:46,143 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:22:46,143 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:22:46,143 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:24:29,721 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:24:29,721 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:24:29,721 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:24:29,721 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:24:31,870 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:24:31,870 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:24:31,870 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:24:31,870 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 11:28:57,915 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:28:57,915 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 11:28:57,915 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 11:28:57,915 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:21:29,709 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:21:29,709 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 12:21:29,709 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:21:29,709 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:23:56,794 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Building from D:\Projects\SummerPractice\newspaper\newspaper-portlet/src/main/webapp/WEB-INF/service.xml
+2018-08-01 12:24:11,944 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:24:11,944 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet-service\src\main\resources
+2018-08-01 12:24:11,944 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:24:11,944 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet-service\src\test\resources
+2018-08-01 12:24:12,162 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:24:12,162 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 12:24:12,178 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:24:12,178 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:29:18,566 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:29:18,567 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 12:29:18,570 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:29:18,570 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:40:28,021 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:40:28,021 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:40:28,021 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:40:28,021 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:42:42,381 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:42:42,381 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:42:42,381 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:42:42,381 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:43:54,335 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:43:54,335 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:43:54,350 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:43:54,350 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:44:07,565 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:44:07,565 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:44:07,567 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:44:07,567 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:45:31,720 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:45:31,721 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:45:31,722 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:45:31,722 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:45:43,909 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:45:43,909 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:45:43,909 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:45:43,909 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:46:31,135 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:46:31,135 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:46:31,135 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:46:31,135 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:47:53,228 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:47:53,228 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:47:53,228 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:47:53,228 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:47:58,713 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:47:58,713 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:47:58,713 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:47:58,713 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:48:50,169 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:48:50,169 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:48:50,170 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:48:50,171 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:49:11,799 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:11,800 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:49:11,801 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:11,801 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:49:29,640 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:29,641 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:49:29,642 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:29,642 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:49:51,614 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:51,614 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:49:51,630 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:49:51,630 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:50:58,911 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:50:58,926 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:50:58,926 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:50:58,926 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:51:51,791 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:51:51,791 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:51:51,791 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:51:51,791 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:52:31,104 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:52:31,119 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:52:31,119 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:52:31,119 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:52:39,362 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:52:39,362 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:52:39,362 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:52:39,362 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:54:33,251 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:54:33,251 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:54:33,251 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:54:33,251 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:54:52,174 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:54:52,174 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:54:52,175 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:54:52,175 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:55:54,592 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:55:54,593 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:55:54,595 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:55:54,595 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 12:56:03,520 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:56:03,520 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 12:56:03,520 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 12:56:03,520 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 14:24:04,546 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:24:04,546 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 14:24:04,546 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:24:04,546 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 14:24:39,874 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:24:39,874 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 11 resources
+2018-08-01 14:24:39,874 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:24:39,874 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 14:25:01,697 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:25:01,697 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 14:25:01,697 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:25:01,697 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources
+2018-08-01 14:28:42,984 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:28:42,984 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-08-01 14:28:42,984 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-08-01 14:28:42,984 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projects\SummerPractice\newspaper\newspaper-portlet\src\test\resources

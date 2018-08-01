@@ -40,6 +40,7 @@
 .article_content .date {
 	color: #2a52a2;
 	float: right;
+	margin: 14px;
 }
 
 .comment_title {
@@ -147,4 +148,9 @@
 
 .aui .control-group .custom .field  {
 	margin-bottom: 5px;
+}
+
+.image {
+	height: 50px;
+	width: 50px;
 }

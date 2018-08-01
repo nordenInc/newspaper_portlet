@@ -175,6 +175,21 @@ public interface NewsArticleModel extends BaseModel<NewsArticle> {
      */
     public void setAuthorId(long authorId);
 
+    /**
+     * Returns the image url of this news article.
+     *
+     * @return the image url of this news article
+     */
+    @AutoEscape
+    public String getImageUrl();
+
+    /**
+     * Sets the image url of this news article.
+     *
+     * @param imageUrl the image url of this news article
+     */
+    public void setImageUrl(String imageUrl);
+
     @Override
     public boolean isNew();
 

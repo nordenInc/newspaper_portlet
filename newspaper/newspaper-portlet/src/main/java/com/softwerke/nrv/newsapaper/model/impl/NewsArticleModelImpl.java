@@ -53,9 +53,10 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
             { "createDate", Types.TIMESTAMP },
             { "editorComment", Types.VARCHAR },
             { "updateDate", Types.TIMESTAMP },
-            { "authorId", Types.BIGINT }
+            { "authorId", Types.BIGINT },
+            { "imageUrl", Types.VARCHAR }
         };
-    public static final String TABLE_SQL_CREATE = "create table newsartcile_data (articleId LONG not null primary key,author VARCHAR(75) null,title VARCHAR(75) null,content VARCHAR(75) null,status INTEGER,createDate DATE null,editorComment VARCHAR(75) null,updateDate DATE null,authorId LONG)";
+    public static final String TABLE_SQL_CREATE = "create table newsartcile_data (articleId LONG not null primary key,author VARCHAR(75) null,title VARCHAR(75) null,content VARCHAR(75) null,status INTEGER,createDate DATE null,editorComment VARCHAR(75) null,updateDate DATE null,authorId LONG,imageUrl VARCHAR(75) null)";
     public static final String TABLE_SQL_DROP = "drop table newsartcile_data";
     public static final String ORDER_BY_JPQL = " ORDER BY newsArticle.articleId ASC";
     public static final String ORDER_BY_SQL = " ORDER BY newsartcile_data.articleId ASC";
@@ -84,6 +85,7 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
     private String _editorComment;
     private Date _updateDate;
     private long _authorId;
+    private String _imageUrl;
     private NewsArticle _escapedModel;
 
     public NewsArticleModelImpl() {
@@ -132,6 +134,7 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
         attributes.put("editorComment", getEditorComment());
         attributes.put("updateDate", getUpdateDate());
         attributes.put("authorId", getAuthorId());
+        attributes.put("imageUrl", getImageUrl());
 
         return attributes;
     }
@@ -190,6 +193,12 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
 
         if (authorId != null) {
             setAuthorId(authorId);
+        }
+
+        String imageUrl = (String) attributes.get("imageUrl");
+
+        if (imageUrl != null) {
+            setImageUrl(imageUrl);
         }
     }
 
@@ -300,6 +309,20 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
     }
 
     @Override
+    public String getImageUrl() {
+        if (_imageUrl == null) {
+            return StringPool.BLANK;
+        } else {
+            return _imageUrl;
+        }
+    }
+
+    @Override
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
+    }
+
+    @Override
     public ExpandoBridge getExpandoBridge() {
         return ExpandoBridgeFactoryUtil.getExpandoBridge(0,
             NewsArticle.class.getName(), getPrimaryKey());
@@ -335,6 +358,7 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
         newsArticleImpl.setEditorComment(getEditorComment());
         newsArticleImpl.setUpdateDate(getUpdateDate());
         newsArticleImpl.setAuthorId(getAuthorId());
+        newsArticleImpl.setImageUrl(getImageUrl());
 
         newsArticleImpl.resetOriginalValues();
 
@@ -442,12 +466,20 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
 
         newsArticleCacheModel.authorId = getAuthorId();
 
+        newsArticleCacheModel.imageUrl = getImageUrl();
+
+        String imageUrl = newsArticleCacheModel.imageUrl;
+
+        if ((imageUrl != null) && (imageUrl.length() == 0)) {
+            newsArticleCacheModel.imageUrl = null;
+        }
+
         return newsArticleCacheModel;
     }
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(19);
+        StringBundler sb = new StringBundler(21);
 
         sb.append("{articleId=");
         sb.append(getArticleId());
@@ -467,6 +499,8 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
         sb.append(getUpdateDate());
         sb.append(", authorId=");
         sb.append(getAuthorId());
+        sb.append(", imageUrl=");
+        sb.append(getImageUrl());
         sb.append("}");
 
         return sb.toString();
@@ -474,7 +508,7 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
 
     @Override
     public String toXmlString() {
-        StringBundler sb = new StringBundler(31);
+        StringBundler sb = new StringBundler(34);
 
         sb.append("<model><model-name>");
         sb.append("com.softwerke.nrv.newsapaper.model.NewsArticle");
@@ -515,6 +549,10 @@ public class NewsArticleModelImpl extends BaseModelImpl<NewsArticle>
         sb.append(
             "<column><column-name>authorId</column-name><column-value><![CDATA[");
         sb.append(getAuthorId());
+        sb.append("]]></column-value></column>");
+        sb.append(
+            "<column><column-name>imageUrl</column-name><column-value><![CDATA[");
+        sb.append(getImageUrl());
         sb.append("]]></column-value></column>");
 
         sb.append("</model>");

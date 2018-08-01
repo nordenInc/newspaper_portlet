@@ -31,10 +31,11 @@ public class NewsArticleCacheModel implements CacheModel<NewsArticle>,
     public String editorComment;
     public long updateDate;
     public long authorId;
+    public String imageUrl;
 
     @Override
     public String toString() {
-        StringBundler sb = new StringBundler(19);
+        StringBundler sb = new StringBundler(21);
 
         sb.append("{articleId=");
         sb.append(articleId);
@@ -54,6 +55,8 @@ public class NewsArticleCacheModel implements CacheModel<NewsArticle>,
         sb.append(updateDate);
         sb.append(", authorId=");
         sb.append(authorId);
+        sb.append(", imageUrl=");
+        sb.append(imageUrl);
         sb.append("}");
 
         return sb.toString();
@@ -105,6 +108,12 @@ public class NewsArticleCacheModel implements CacheModel<NewsArticle>,
 
         newsArticleImpl.setAuthorId(authorId);
 
+        if (imageUrl == null) {
+            newsArticleImpl.setImageUrl(StringPool.BLANK);
+        } else {
+            newsArticleImpl.setImageUrl(imageUrl);
+        }
+
         newsArticleImpl.resetOriginalValues();
 
         return newsArticleImpl;
@@ -121,6 +130,7 @@ public class NewsArticleCacheModel implements CacheModel<NewsArticle>,
         editorComment = objectInput.readUTF();
         updateDate = objectInput.readLong();
         authorId = objectInput.readLong();
+        imageUrl = objectInput.readUTF();
     }
 
     @Override
@@ -157,5 +167,11 @@ public class NewsArticleCacheModel implements CacheModel<NewsArticle>,
 
         objectOutput.writeLong(updateDate);
         objectOutput.writeLong(authorId);
+
+        if (imageUrl == null) {
+            objectOutput.writeUTF(StringPool.BLANK);
+        } else {
+            objectOutput.writeUTF(imageUrl);
+        }
     }
 }

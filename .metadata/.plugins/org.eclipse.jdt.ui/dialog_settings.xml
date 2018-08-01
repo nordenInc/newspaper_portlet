@@ -38,6 +38,60 @@
 	<section name="ClasspathContainerSelectionPage">
 		<item value="4" key="index"/>
 	</section>
+	<section name="javadoc">
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="false" key="notree"/>
+		<item value="true" key="splitindex"/>
+		<item value="C:\Program Files\Java\jdk1.7.0_79\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="true" key="use"/>
+		<item value="false" key="nonavbar"/>
+		<item value="public" key="access"/>
+		<item value="true" key="version"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet\doc" key="destdir"/>
+		<item value="true" key="author"/>
+		<item value="" key="docletname"/>
+		<item value="1.7" key="source"/>
+		<item value="false" key="openinbrowser"/>
+		<item value="false" key="noindex"/>
+		<item value="" key="docletpath"/>
+		<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet\javadoc.xml" key="antpath"/>
+		<item value="true" key="fromStandard"/>
+		<section name="projects">
+			<section name="newspaper-portlet">
+				<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet\doc" key="destdir"/>
+				<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet\javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="RemoteSystemsTempFiles">
+				<item value="D:\Projects\SummerPractice\RemoteSystemsTempFiles\doc" key="destdir"/>
+				<item value="D:\Projects\SummerPractice\RemoteSystemsTempFiles\javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="newspaper-portlet-service">
+				<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet-service\doc" key="destdir"/>
+				<item value="D:\Projects\SummerPractice\newspaper\newspaper-portlet-service\javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Servers">
+				<item value="D:\Projects\SummerPractice\Servers\doc" key="destdir"/>
+				<item value="D:\Projects\SummerPractice\Servers\javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="newspaper">
+				<item value="D:\Projects\SummerPractice\newspaper\doc" key="destdir"/>
+				<item value="D:\Projects\SummerPractice\newspaper\javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="818" key="DIALOG_WIDTH"/>
+		<item value="61" key="DIALOG_Y_ORIGIN"/>
+		<item value="695" key="DIALOG_HEIGHT"/>
+		<item value="560" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
 	</section>

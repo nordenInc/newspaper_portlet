@@ -22,6 +22,7 @@ public class NewsArticleSoap implements Serializable {
     private String _editorComment;
     private Date _updateDate;
     private long _authorId;
+    private String _imageUrl;
 
     public NewsArticleSoap() {
     }
@@ -38,6 +39,7 @@ public class NewsArticleSoap implements Serializable {
         soapModel.setEditorComment(model.getEditorComment());
         soapModel.setUpdateDate(model.getUpdateDate());
         soapModel.setAuthorId(model.getAuthorId());
+        soapModel.setImageUrl(model.getImageUrl());
 
         return soapModel;
     }
@@ -156,5 +158,13 @@ public class NewsArticleSoap implements Serializable {
 
     public void setAuthorId(long authorId) {
         _authorId = authorId;
+    }
+
+    public String getImageUrl() {
+        return _imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        _imageUrl = imageUrl;
     }
 }

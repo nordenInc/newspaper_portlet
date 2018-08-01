@@ -53,8 +53,10 @@
 
 	<div class="article_title">${article.title}</div>
 	<div class="article_content">${article.content}</div>
+
 	<div class="article_content">
-		<liferay-ui:message key="author"/>: ${article.author}
+		<img class="image" src="${article.imageUrl}"/>
+		<liferay-ui:message key="by"/>: ${article.author}
 		<div class="date">${article.createDate}</div>
 	</div>
 	
@@ -73,7 +75,6 @@
 		</div>
 	</div>
 		
-	<br>
 
 	<c:forEach items="${userComments}" var="comment">
 		<c:if test="${comment.articleId eq article.articleId}">
@@ -83,7 +84,8 @@
 		</portlet:actionURL>
 		
 		<div class="article_content">
-			<liferay-ui:message key="author"/>:
+			<img class="image" src="${comment.imageUrl}"/>
+			<liferay-ui:message key="by"/>:
 			${comment.author}
 			<div class="date">
 				<liferay-ui:message key="date"/>:

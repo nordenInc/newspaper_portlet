@@ -331,6 +331,7 @@ public class NewsArticlePersistenceImpl extends BasePersistenceImpl<NewsArticle>
         newsArticleImpl.setEditorComment(newsArticle.getEditorComment());
         newsArticleImpl.setUpdateDate(newsArticle.getUpdateDate());
         newsArticleImpl.setAuthorId(newsArticle.getAuthorId());
+        newsArticleImpl.setImageUrl(newsArticle.getImageUrl());
 
         return newsArticleImpl;
     }

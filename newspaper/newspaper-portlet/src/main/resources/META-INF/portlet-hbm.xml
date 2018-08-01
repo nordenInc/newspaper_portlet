@@ -17,6 +17,7 @@
 		<property name="editorComment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="updateDate" type="org.hibernate.type.TimestampType" />
 		<property name="authorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 	<class name="com.softwerke.nrv.newsapaper.model.impl.UserCommentImpl" table="usercomment_data">
 		<cache usage="read-write" />

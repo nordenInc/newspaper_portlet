@@ -11,6 +11,7 @@
 		<field name="editorComment" type="String" />
 		<field name="updateDate" type="Date" />
 		<field name="authorId" type="long" />
+		<field name="imageUrl" type="String" />
 	</model>
 	<model name="com.softwerke.nrv.newsapaper.model.UserComment">
 		<field name="commentId" type="long" />

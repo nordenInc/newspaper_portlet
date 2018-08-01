@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MasterDetailsEditorPageState>
     <ContentOutlineState>
-        <Ratio>0.2969187675070028</Ratio>
+        <Ratio>0.29685157421289354</Ratio>
         <Root>
             <Children>
                 <MasterDetailsNodeState>
@@ -19,6 +19,7 @@
                                         <MasterDetailsNodeState>
                                             <Label>Columns</Label>
                                             <Expanded>true</Expanded>
+                                            <Selected>true</Selected>
                                         </MasterDetailsNodeState>
                                     </Children>
                                 </MasterDetailsNodeState>
@@ -29,7 +30,6 @@
                                         <MasterDetailsNodeState>
                                             <Label>Columns</Label>
                                             <Expanded>true</Expanded>
-                                            <Selected>true</Selected>
                                         </MasterDetailsNodeState>
                                     </Children>
                                 </MasterDetailsNodeState>
