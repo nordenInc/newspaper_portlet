@@ -33,6 +33,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 	private static final String EDITOR = "Editor";
 	private static final String ADMINISTRATOR = "Administrator";
 	
+	//read about volatile, synchronized
 	private static volatile NewspaperServiceImpl newspaperServiceImpl;
 	private NewspaperServiceImpl() {}
 	
@@ -62,7 +63,8 @@ public class NewspaperServiceImpl implements NewspaperService {
 			String content = ParamUtil.getString(actionRequest, "content");
 			Date date = new Date();
 			
-			String user = portletUtils.getUserRole(actionRequest, actionResponse);
+			//change string name
+			String user = portletUtils.getUserRole(actionRequest, actionResponse).getName();
 			StatusEnums statusEnums = StatusEnums.UNCHECKED;
 			if (user.equals(EDITOR) || user.equals(ADMINISTRATOR)) {
 				statusEnums = StatusEnums.PUBLISHED;
@@ -82,7 +84,6 @@ public class NewspaperServiceImpl implements NewspaperService {
 			log.error("SystemException, check saveArticle method." + e.getMessage());
 		} catch (PortalException e) {
 			log.error("PortalException, check saveArticle method." + e.getMessage());
-			e.printStackTrace();
 		}		
 	}
 
@@ -103,7 +104,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 
 	@Override
 	public void updateArticle(ActionRequest actionRequest,ActionResponse actionResponse) {
-		
+		//create method check article
 		try {
 			long newsArticleId = ParamUtil.getLong(actionRequest, "articleId");
 			String title = ParamUtil.getString(actionRequest, "title");
@@ -159,7 +160,7 @@ public class NewspaperServiceImpl implements NewspaperService {
 	
 	@Override
 	public void showAuthorArticles(RenderRequest renderRequest, RenderResponse renderResponse) {
-		
+		// rename to current author
 		try {
 			List<NewsArticle> myAuthorArticles = new ArrayList<>();
 			ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
@@ -176,9 +177,9 @@ public class NewspaperServiceImpl implements NewspaperService {
 		}
 	}
 	
-	@Override
+	@Override //what for
 	public void showEditorArticles(RenderRequest renderRequest, RenderResponse renderResponse) {
-	
+	//rename to current editor
 		try {
 			List<NewsArticle> myEditorArticles = new ArrayList<>();
 			List<NewsArticle> myArticles = NewsArticleLocalServiceUtil.getNewsArticles(QueryUtil.ALL_POS, QueryUtil.ALL_POS);

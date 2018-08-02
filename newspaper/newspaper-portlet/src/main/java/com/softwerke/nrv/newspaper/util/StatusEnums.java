@@ -9,6 +9,7 @@ public enum StatusEnums {
 		this.value = value;
 	}
 	
+	//TODO
 	public static StatusEnums byNumber(int value) {
 		StatusEnums status = StatusEnums.UNCHECKED;
 		if (value == 2) {

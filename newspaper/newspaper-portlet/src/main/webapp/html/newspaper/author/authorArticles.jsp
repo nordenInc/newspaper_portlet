@@ -7,7 +7,14 @@
 		crossorigin="anonymous">
 </script>
 
+<%--js client library --%>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+	$(document).ready( function () {
+    	$('#articleTableAuthor').DataTable();
+	} );
+</script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
 
 <div class="cabinet_title"><liferay-ui:message key="authors_cabinet"/></div>
@@ -42,13 +49,14 @@
 	</thead>
 	
 	<tbody>
+	<%--read about varStatus="loop" --%>
 		<c:forEach items="${myAuthorArticles}" var="article" varStatus="loop">
 			
 			<portlet:renderURL var = "redirectToUpdateArticleUrl">
 				<portlet:param name = "page" value = "updateArticle"/>
 				<portlet:param name = "articleId" value = "${article.articleId}"/>
 			</portlet:renderURL>
-			
+			<%--check about set param article, find actionUrl in inspect --%>
 			<portlet:actionURL var="deleteArticleUrl" name="deleteArticle">
 				<portlet:param name="articleId" value="${article.articleId}"/>
 			</portlet:actionURL>
@@ -57,6 +65,7 @@
 				<td>${article.title}</td>	
 				<td>${article.content}</td>
 				<td>
+				<%--read about scope --%>
 					<c:set var = "status" scope = "session" value = "${article.status}"/>
 					<c:choose>
 						<c:when test = "${status == 1}">
@@ -85,19 +94,3 @@
 	</tbody>
 	
 </table>
-
-<script>
-	$(document).ready( function () {
-	    $('#articleTableAuthor').DataTable();
-	} );
-	
-	function updateWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to update article with id: " + articleId);
-	}
-	
-	function deleteWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to delete article with id: " + articleId);
-	}
-</script>

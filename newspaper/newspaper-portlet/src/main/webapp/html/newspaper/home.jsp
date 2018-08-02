@@ -8,6 +8,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous">
 </script>
+<script type="text/javascript" src="js/main.js"></script>
 
 <div class="main_title"><liferay-ui:message key="motorsport_news"/></div>
 
@@ -74,10 +75,11 @@
 			</c:if>
 		</div>
 	</div>
-		
+	<br>
 
 	<c:forEach items="${userComments}" var="comment">
 		<c:if test="${comment.articleId eq article.articleId}">
+		<div class="article_content"><liferay-ui:message key="comment"/>:</div>
 
 		<portlet:actionURL var = "deleteCommentUrl" name = "deleteComment">
 			<portlet:param name = "commentId" value = "${comment.commentId}"/>
@@ -106,7 +108,7 @@
 	</c:forEach>
 	
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor') || (role eq 'Author') || (role eq 'Reviewer')}">
-	
+	<%-- read about post, get, comments variety --%>
 	<aui:form action = "${saveCommentUrl}" method = "post" >
 		<aui:input class = "field" type = "text" name = "title"/>
 		<aui:input type = "text" name = "comment"/>
@@ -116,15 +118,3 @@
 	</c:if>
 	<br>
 </c:forEach>
-
-<script>
-	function updateWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to update article with id: " + articleId);
-	}
-	
-	function deleteWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to delete article with id: " + articleId);
-	}
-</script>

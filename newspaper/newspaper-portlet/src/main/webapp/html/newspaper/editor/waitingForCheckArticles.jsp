@@ -6,8 +6,14 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous">
 </script>
-
 <script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+	$(document).ready( function () {
+    	$('#articleTableEditor').DataTable();
+	} );
+</script>
+<%--**// and cdn --%>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
 
 <div class="cabinet_title"><liferay-ui:message key="editors_cabinet"/></div>
@@ -94,24 +100,3 @@
 	</tbody>
 	
 </table>
-
-<script>
-	$(document).ready( function () {
-	    $('#articleTableEditor').DataTable();
-	} );
-		
-	function updateWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to update article with id: " + articleId);
-	}
-	
-	function publishWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to publish article with id: " + articleId);
-	}
-	
-	function deleteWarning(_articleId){
-		var articleId = _articleId;
-		alert("You are going to delete article with id: " + articleId);
-	}
-</script>

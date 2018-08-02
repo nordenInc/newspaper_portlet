@@ -28,7 +28,7 @@ public class NewspaperPortlet extends MVCPortlet {
     	
 		String redirect = ParamUtil.getString(renderRequest, "page"); 
 		
-		portletUtils.getUserRole(renderRequest, renderResponse);
+		portletUtils.setUserRoleName(renderRequest, renderResponse);
 		newspaperServiceImpl.showPublishedArticles(renderRequest, renderResponse);
 					
 		if(redirect.equalsIgnoreCase("authorCabinet")) {
