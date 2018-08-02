@@ -22,10 +22,7 @@ public class PortletUtils {
 	private static final String EDITOR = "Editor";
 	private static final String REVIEWER = "Reviewer";
 	private static final String ADMINISTRATOR = "Administrator";
-	
-	
-	//return role, make two methods
-	
+		
 	public Role getUserRole(PortletRequest portletRequest, PortletResponse portletResponse) {
 		
 		Role userRole = null;
@@ -49,7 +46,7 @@ public class PortletUtils {
 			log.error("PortalException, check getUserRole method." + e.getMessage());
 		}
 		return userRole;
-	} //read about throwable exception, catch clause, hierarchy
+	}
 	
 	public void setUserRoleName(PortletRequest portletRequest, PortletResponse portletResponse) {
 		

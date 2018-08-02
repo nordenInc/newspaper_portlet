@@ -36,10 +36,10 @@ public class NewspaperPortlet extends MVCPortlet {
 		} else if(redirect.equalsIgnoreCase("editorCabinet")) {
 			include("/html/newspaper/editor/editorCabinet.jsp", renderRequest, renderResponse);
 		} else if(redirect.equalsIgnoreCase("authorArticles")) {
-			newspaperServiceImpl.showAuthorArticles(renderRequest, renderResponse);
+			newspaperServiceImpl.showCurrentAuthorArticles(renderRequest, renderResponse);
 			include("/html/newspaper/author/authorArticles.jsp", renderRequest, renderResponse);
 		} else if(redirect.equalsIgnoreCase("waitingForCheckArticles")) {
-			newspaperServiceImpl.showEditorArticles(renderRequest, renderResponse);
+			newspaperServiceImpl.showCurrentEditorArticles(renderRequest, renderResponse);
 			include("/html/newspaper/editor/waitingForCheckArticles.jsp", renderRequest, renderResponse);
 		} else if(redirect.equalsIgnoreCase("updateArticle")) {
 			newspaperServiceImpl.showUpdateArticle(renderRequest, renderResponse);

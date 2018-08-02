@@ -8,15 +8,13 @@ public enum StatusEnums {
 	private StatusEnums(int value) {
 		this.value = value;
 	}
-	
-	//TODO
+
 	public static StatusEnums byNumber(int value) {
 		StatusEnums status = StatusEnums.UNCHECKED;
-		if (value == 2) {
-			status = StatusEnums.CHECKED;
-		}
-		if (value == 3) {
-			status = StatusEnums.PUBLISHED;
+		for (StatusEnums statusEnum:StatusEnums.values()) {
+			if (statusEnum.getValue() == value) {
+				status = statusEnum;
+			}
 		}
 		return status;
 	}

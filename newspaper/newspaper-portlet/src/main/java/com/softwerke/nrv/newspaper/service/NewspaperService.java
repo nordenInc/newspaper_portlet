@@ -17,9 +17,9 @@ public interface NewspaperService {
 	
 	void showPublishedArticles(RenderRequest renderRequest, RenderResponse renderResponse);
 	
-	public void showAuthorArticles(RenderRequest renderRequest, RenderResponse renderResponse);
+	public void showCurrentAuthorArticles(RenderRequest renderRequest, RenderResponse renderResponse);
 	
-	public void showEditorArticles(RenderRequest renderRequest, RenderResponse renderResponse);
+	public void showCurrentEditorArticles(RenderRequest renderRequest, RenderResponse renderResponse);
 	
 	public void showUpdateArticle(RenderRequest renderRequest, RenderResponse renderResponse);
 	

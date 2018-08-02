@@ -21,10 +21,13 @@
 	</div>
 </div>
 
+<c:set var = "role" value = "${userRole}"/> 
 <aui:form action = "${updateArticleUrl}" method = "post" >
 	<div class="cabinet_article"><liferay-ui:message key="article"/>:</div>
 	<aui:input type = "text" name = "title" value = "${newsArticle.title}"/>
 	<aui:input type = "text" name = "content" value = "${newsArticle.content}"/>
-	<aui:input type = "text" name = "editorComment" value = "${newsArticle.editorComment}"/>
+	<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
+		<aui:input type = "text" name = "editorComment" value = "${newsArticle.editorComment}"/>
+	</c:if>
 	<button type = "submit"><liferay-ui:message key="update_article"/></button>
 </aui:form>
