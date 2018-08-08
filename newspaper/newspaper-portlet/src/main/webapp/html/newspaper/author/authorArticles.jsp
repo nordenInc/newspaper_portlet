@@ -7,14 +7,8 @@
 		crossorigin="anonymous">
 </script>
 
-<%--js client library --%>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script>
-	$(document).ready( function () {
-    	$('#articleTableAuthor').DataTable();
-	} );
-</script>
+
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
 
 <div class="cabinet_title"><liferay-ui:message key="authors_cabinet"/></div>
@@ -49,14 +43,14 @@
 	</thead>
 	
 	<tbody>
-	<%--read about varStatus="loop" --%>
+
 		<c:forEach items="${myAuthorArticles}" var="article" varStatus="loop">
 			
 			<portlet:renderURL var = "redirectToUpdateArticleUrl">
 				<portlet:param name = "page" value = "updateArticle"/>
 				<portlet:param name = "articleId" value = "${article.articleId}"/>
 			</portlet:renderURL>
-			<%--check about set param article, find actionUrl in inspect --%>
+		
 			<portlet:actionURL var="deleteArticleUrl" name="deleteArticle">
 				<portlet:param name="articleId" value="${article.articleId}"/>
 			</portlet:actionURL>
@@ -83,9 +77,7 @@
 					<a href="${redirectToUpdateArticleUrl}"><button onClick='updateWarning("${article.articleId}");' type = "submit">
 						<liferay-ui:message key="update"/></button>
 					</a>
-					<a href="${deleteArticleUrl}" ><button onClick='deleteWarning("${article.articleId}");'>
-						<liferay-ui:message key="delete"/></button>
-					</a>
+					<button onClick='deleteWarn();'><liferay-ui:message key="delete"/></button>
 				</td>
 				<td>${article.createDate}</td>
 				<td>${article.editorComment}</td>
@@ -94,3 +86,26 @@
 	</tbody>
 	
 </table>
+
+<script>
+	$(document).ready( function () {
+    	$('#articleTableAuthor').DataTable();
+	} );
+	
+	function updateWarning(_articleId){
+		var articleId = _articleId;
+		alert("You are going to update article with id: " + articleId);
+	}
+
+	function deleteWarn() {
+    	var r = confirm("Are you sure that you want to delete this?");
+   			if (r == true) {
+   				window.location.replace('${deleteArticleUrl}');
+    		}
+	}  
+
+	function publishWarning(_articleId){
+		var articleId = _articleId;
+		alert("You are going to publish article with id: " + articleId);
+	}
+</script>

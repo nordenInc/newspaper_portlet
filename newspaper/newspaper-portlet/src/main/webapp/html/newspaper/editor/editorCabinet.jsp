@@ -28,3 +28,5 @@
 	<aui:input type = "text" name = "content"/>
 	<button type = "submit"><liferay-ui:message key="publish"/></button>
 </aui:form>
+
+<button class="task_button">Click me!</button>

@@ -146,6 +146,27 @@
 	background-color:#1f3d7a;
 }
 
+.comment_button {
+	color: white;
+	background-color:#84a1e1;
+	padding: 5px;
+	margin: 4px;
+	border: 1px solid #84a1e1;
+	border-radius: 15px;
+	text-decoration: none;
+}
+
+.comment_button:hover {
+	color:white;
+	text-decoration:none;
+	padding: 6px;
+	border-radius: 16px;
+}
+
+.comment_button:active {
+	background-color:#1f3d7a;
+}
+
 .aui .control-group .custom .field  {
 	margin-bottom: 5px;
 }
@@ -153,4 +174,32 @@
 .image {
 	height: 50px;
 	width: 50px;
+}
+
+#portlet_news_WAR_newspaperportlet {
+	background-color:#e6f3ff; 
+}
+
+section.portlet#portlet_news_WAR_newspaperportlet {
+	box-shadow: 10px 10px 15px #99c2ff;
+}
+
+.task_button {
+	height: 80px;
+  	width: 80px;
+	background: #00b300;
+	color: white;
+	border-radius: 50%;
+	border-color: white;
+}
+
+.task_button:hover {
+	color: #00b300;
+	background: white;
+	border-color: #00b300;
+	
+}
+
+#articleTableEditor_wrapper {
+	margin:50px 0px 0px 0px;
 }

@@ -5,11 +5,6 @@
 
 <portlet:defineObjects />
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="js/main.js"></script>
-
 <div class="main_title"><liferay-ui:message key="motorsport_news"/></div>
 
 <portlet:renderURL var = "redirectToAuthorCabinetUrl">
@@ -64,18 +59,15 @@
 	<div class="custom">
 		<div class="custom_buttons">
 			<div class="comment_buttons"><a href = "${showCommentUrl}" ><liferay-ui:message key="show_all_comments"/></a></div>
-			<hr>
-			<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
-				<a class="article_buttons" href="${redirectToUpdateArticleUrl}" onClick = 'updateWarning("${article.articleId}");'>
-					<liferay-ui:message key="update"/>
-				</a>
-				<a class="article_buttons" href="${deleteArticleUrl}" onClick = 'deleteWarning("${article.articleId}");'>
-					<liferay-ui:message key="delete"/>
-				</a>
-			</c:if>
 		</div>
 	</div>
-	<br>
+	<hr>
+	
+	<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
+		<button class="comment_button" onClick = 'updateWarn();'><liferay-ui:message key="update"/></button>
+		<button class="comment_button" onClick = 'deleteWarn();'><liferay-ui:message key="delete"/></button>
+	</c:if>
+	<br><br>
 
 	<c:forEach items="${userComments}" var="comment">
 		<c:if test="${comment.articleId eq article.articleId}">
@@ -104,17 +96,39 @@
 				</div>
 			</div>
 		</div>
-		</c:if>
+	</c:if>
 	</c:forEach>
 	
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor') || (role eq 'Author') || (role eq 'Reviewer')}">
-	<%-- read about post, get, comments variety --%>
+
 	<aui:form action = "${saveCommentUrl}" method = "post" >
 		<aui:input class = "field" type = "text" name = "title"/>
 		<aui:input type = "text" name = "comment"/>
-		<button type = "submit"><liferay-ui:message key="leave_a_comment"/></button>	
+		<button class="comment_button" type = "submit"><liferay-ui:message key="leave_a_comment"/></button>	
 	</aui:form>
+	<hr>
 	
 	</c:if>
 	<br>
 </c:forEach>
+
+<script>
+	function deleteWarn() {
+    	var r = confirm("Are you sure that you want to delete this?");
+   			if (r == true) {
+   				window.location.replace('${deleteArticleUrl}');
+    		}
+	}    
+	    
+	function updateWarn(_articleId){
+		var r = confirm("Are you sure that you want to update this?");
+   			if (r == true) {
+   				window.location.replace('${redirectToUpdateArticleUrl}');
+    		}
+	}
+
+	function publishWarning(_articleId){
+		var articleId = _articleId;
+		alert("You are going to publish article with id: " + articleId);
+	}	
+</script>

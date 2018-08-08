@@ -1,13 +1,10 @@
 
-function updateWarning(_articleId){
-	var articleId = _articleId;
-	alert("You are going to update article with id: " + articleId);
-}
-
-function deleteWarning(_articleId){
-	var articleId = _articleId;
-	alert("You are going to delete article with id: " + articleId);
-}
+function deleteWarn() {
+    	var r = confirm("Are you sure that you want to delete this?");
+   			if (r == true) {
+   				window.location.replace('${deleteArticleUrl}');
+    		}
+	}
 
 function publishWarning(_articleId){
 	var articleId = _articleId;

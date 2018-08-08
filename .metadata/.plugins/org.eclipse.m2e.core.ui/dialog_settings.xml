@@ -37,13 +37,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="groupId">
-			<item value="com.softwerke.nrv.newspaper"/>
+			<item value="example"/>
 		</list>
 		<list key="package">
-			<item value="com.softwerke.nrv.newspaper.org.softwerke.nrv.portlet"/>
+			<item value="org.example"/>
 		</list>
 		<list key="artifactId">
-			<item value="org.softwerke.nrv.portlet"/>
+			<item value="example"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,8 +56,14 @@
 			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.preferences.RemoteArchetypeCatalogDialog">
+		<list key="catalogUrl">
+			<item value="https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/archetype-catalog.xml"/>
+		</list>
+	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="example"/>
 			<item value="showusers-portlet"/>
 			<item value="helloworld-portlet"/>
 			<item value="news-portlet"/>
@@ -70,17 +76,15 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 		</list>
 	</section>
-	<section name="org.eclipse.m2e.core.ui.internal.preferences.RemoteArchetypeCatalogDialog">
-		<list key="catalogUrl">
-			<item value="https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/archetype-catalog.xml"/>
-		</list>
-	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="example"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="example"/>
+			<item value="ex-parent"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

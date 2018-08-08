@@ -8,12 +8,7 @@
 </script>
 <script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<script>
-	$(document).ready( function () {
-    	$('#articleTableEditor').DataTable();
-	} );
-</script>
-<%--**// and cdn --%>
+
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
 
 <div class="cabinet_title"><liferay-ui:message key="editors_cabinet"/></div>
@@ -32,7 +27,7 @@
 		<a class="cabinet_buttons" href = "${redirectToEditorCabinetUrl}"><liferay-ui:message key="write_new_article"/></a>
 	</div>
 </div>
-<br><br><br>
+<br><br>
 
 <table id="articleTableEditor" class="articleTableEditor">
 
@@ -89,14 +84,37 @@
 					<a href="${publishArticleUrl}" ><button onClick='publishWarning("${article.articleId}");'>
 						<liferay-ui:message key="publish"/></button>
 					</a>
-					<a href="${deleteArticleUrl}" ><button onClick='deleteWarning("${article.articleId}");'>
-						<liferay-ui:message key="delete"/></button>
-					</a>
+					<button onClick='deleteWarn();'><liferay-ui:message key="delete"/></button>
 				</td>
 				<td>${article.createDate}</td>
 				<td>${article.editorComment}</td>
 			</tr>
 		</c:forEach>
 	</tbody>
-	
+
 </table>
+
+<script>
+	$(document).ready( function () {
+    	$('#articleTableEditor').DataTable();
+	} );
+	
+	function deleteWarn() {
+    	var r = confirm("Are you sure that you want to delete this?");
+   			if (r == true) {
+   				window.location.replace('${deleteArticleUrl}');
+    		}
+	}    
+	    
+	function updateWarn(_articleId){
+		var r = confirm("Are you sure that you want to update this?");
+   			if (r == true) {
+   				window.location.replace('${redirectToUpdateArticleUrl}');
+    		}
+	}
+
+	function publishWarning(_articleId){
+		var articleId = _articleId;
+		alert("You are going to publish article with id: " + articleId);
+	}	
+</script>

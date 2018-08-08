@@ -3,6 +3,8 @@ D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch
 \org.softwerke.nrv.portlet-portlet\src\main\java
 D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3334686472.index
 \news-portlet\src\main\java
+D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2572224327.index
+\example\src\main\java
 D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4214319631.index
 \newspaper-portlet\src\main\java
 D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2584841631.index
@@ -25,5 +27,7 @@ D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch
 \newspaper-portlet-portlet\src\main\java
 D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\498568516.index
 \showusers-portlet\src\main\java
+D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2203993171.index
+\example\src\main\java
 D:\Projects\SummerPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1392995900.index
 \showusers-portlet\src\main\java
