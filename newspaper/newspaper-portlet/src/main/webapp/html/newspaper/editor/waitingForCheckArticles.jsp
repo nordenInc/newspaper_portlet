@@ -78,13 +78,11 @@
 					</c:choose>
 				</td>
 				<td>
-					<a href="${redirectToUpdateArticleUrl}"><button onClick='updateWarning("${article.articleId}");' type = "submit">
+					<a href="${redirectToUpdateArticleUrl}"><button onClick='updateWarning("${article.articleId}");'>
 						<liferay-ui:message key="update"/></button>
 					</a>
-					<a href="${publishArticleUrl}" ><button onClick='publishWarning("${article.articleId}");'>
-						<liferay-ui:message key="publish"/></button>
-					</a>
-					<button onClick='deleteWarn();'><liferay-ui:message key="delete"/></button>
+					<a href="${publishArticleUrl}"><button onClick='publishWarning();'><liferay-ui:message key="publish"/></button>
+					<button onClick='deleteWarn();'><liferay-ui:message key="delete"/></button></a>
 				</td>
 				<td>${article.createDate}</td>
 				<td>${article.editorComment}</td>
@@ -107,10 +105,8 @@
 	}    
 	    
 	function updateWarn(_articleId){
-		var r = confirm("Are you sure that you want to update this?");
-   			if (r == true) {
-   				window.location.replace('${redirectToUpdateArticleUrl}');
-    		}
+		var articleId = _articleId;
+		alert("You are going to publish article with id: " + articleId);
 	}
 
 	function publishWarning(_articleId){

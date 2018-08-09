@@ -185,21 +185,39 @@ section.portlet#portlet_news_WAR_newspaperportlet {
 }
 
 .task_button {
+	cursor: pointer;
 	height: 80px;
   	width: 80px;
 	background: #00b300;
+	border: 2px solid white;
 	color: white;
 	border-radius: 50%;
-	border-color: white;
 }
 
 .task_button:hover {
 	color: #00b300;
 	background: white;
-	border-color: #00b300;
-	
+	border: 2px solid #00b300;
 }
 
 #articleTableEditor_wrapper {
 	margin:50px 0px 0px 0px;
 }
+
+#box {
+	display: none;
+	text-align: center;
+}
+
+.license_align {
+	text-align: center;
+}
+
+#toggler {
+	text-decoration: none;
+}
+
+#toggler:hover{
+	text-decoration: none;
+}
+

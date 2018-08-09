@@ -29,5 +29,5 @@
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
 		<aui:input type = "text" name = "editorComment" value = "${newsArticle.editorComment}"/>
 	</c:if>
-	<button type = "submit"><liferay-ui:message key="update_article"/></button>
+	<button class="comment_button" type = "submit"><liferay-ui:message key="update_article"/></button>
 </aui:form>

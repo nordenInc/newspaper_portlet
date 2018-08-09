@@ -64,7 +64,9 @@
 	<hr>
 	
 	<c:if test="${(role eq 'Administrator') || (role eq 'Editor')}">
-		<button class="comment_button" onClick = 'updateWarn();'><liferay-ui:message key="update"/></button>
+		<a href="${redirectToUpdateArticleUrl}">
+			<button class="comment_button" onClick='updateWarning("${article.articleId}");'><liferay-ui:message key="update"/></button>
+		</a>
 		<button class="comment_button" onClick = 'deleteWarn();'><liferay-ui:message key="delete"/></button>
 	</c:if>
 	<br><br>
@@ -112,19 +114,38 @@
 	<br>
 </c:forEach>
 
+<div class="license_align">
+	<a id="toggler" href="#">© License agreement</a>
+</div>
+<div id="box">All rights reserved by a macaroni monster.</div>
+
 <script>
+	window.onload= function() {
+		document.getElementById('toggler').onclick = function() {
+			openbox('box', this);
+			return false;
+		};
+	};
+	function openbox(id, toggler) {
+		var div = document.getElementById(id);
+		if(div.style.display == 'block') {
+			div.style.display = 'none';
+		}
+		else {
+			div.style.display = 'block';
+		}
+	}
+
 	function deleteWarn() {
     	var r = confirm("Are you sure that you want to delete this?");
    			if (r == true) {
-   				window.location.replace('${deleteArticleUrl}');
+   				window.location.replace("${deleteArticleUrl}");
     		}
 	}    
 	    
-	function updateWarn(_articleId){
-		var r = confirm("Are you sure that you want to update this?");
-   			if (r == true) {
-   				window.location.replace('${redirectToUpdateArticleUrl}');
-    		}
+	function updateWarning(_articleId){
+		var articleId = _articleId;
+		alert("You are going to publish article with id: " + articleId);
 	}
 
 	function publishWarning(_articleId){

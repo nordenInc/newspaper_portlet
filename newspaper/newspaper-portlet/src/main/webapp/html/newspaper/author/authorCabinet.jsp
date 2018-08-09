@@ -26,5 +26,5 @@
 	<div class="cabinet_article"><liferay-ui:message key="new_article"/>:</div>
 	<aui:input type = "text" name = "title"/>
 	<aui:input type = "text" name = "content"/>
-	<button type = "submit"><liferay-ui:message key="send_article_to_editor"/></button>
+	<button class="comment_button" type = "submit"><liferay-ui:message key="send_article_to_editor"/></button>
 </aui:form>
