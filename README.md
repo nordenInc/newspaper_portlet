@@ -25,3 +25,13 @@ The author sees the tabs:
 
 The reviewer sees the tabs: 
 1) Already published articles (with the possibility of leaving comments. Comment consists of a header, avatar and user name, comment leaving date, comment text) Any other user sees only published articles and reviews to them.
+
+Front-end task:
++ Set the background to the entire portlet (color to choose)
++ The entire portlet should cast a shadow (the parameters to choose from, the main thing is to see it was)
++ Make a round green button with white text, when you hover the mouse on which the frame and text become green, and the background is white
++ Between a number of buttons and the working area of ​​the portlet, make a distance of 50px
+
++ For all delete buttons, add a pop-up alert (do you really want to delete ...?) With yes and cancel buttons and they should work
++ Add the text "License Agreement" at the bottom of the portlet, when you click on it, the container with the Ipsum logger will appear under it, and if you press it again, the text will be hidden.
++ Make a button that, upon tapping, will knock ajax into any open REST tester and output an answer in the text field that comes from there.
